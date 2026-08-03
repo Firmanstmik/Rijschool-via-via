@@ -23,6 +23,10 @@ const mainLinks = [
   'Reviews',
 ] as const
 
+const mid = Math.ceil(regions.length / 2)
+const regionsLeft = regions.slice(0, mid)
+const regionsRight = regions.slice(mid)
+
 export function Footer() {
   const year = new Date().getFullYear()
 
@@ -37,13 +41,15 @@ export function Footer() {
           height={1080}
           loading="lazy"
         />
-        <div className="vv-foot__bg-shade" />
+        <div className="vv-foot__bg-veil" />
+        <div className="vv-foot__bg-grain" />
       </div>
 
       <div className="vv-foot__crest" aria-hidden>
+        <div className="vv-foot__crest-edge" />
         <div className="vv-foot__crest-peak">
           <span className="vv-foot__crest-mark">
-            <BrandLogo compact />
+            <img src={brand.logo} alt="" width={44} height={44} />
           </span>
         </div>
       </div>
@@ -86,8 +92,12 @@ export function Footer() {
               Gegevens
             </h3>
             <ul className="vv-foot__meta">
-              <li>KVK {brand.kvk}</li>
-              <li>BTW {brand.btw}</li>
+              <li>
+                <span className="vv-foot__meta-key">KVK</span> {brand.kvk}
+              </li>
+              <li>
+                <span className="vv-foot__meta-key">BTW</span> {brand.btw}
+              </li>
             </ul>
           </div>
 
@@ -104,18 +114,18 @@ export function Footer() {
           <div className="vv-foot__col vv-foot__col--aside">
             <h3 className="vv-foot__heading">Contact</h3>
             <address className="vv-foot__address">
-              <p>{brand.name}</p>
+              <p className="vv-foot__brand-line">{brand.name}</p>
               <p>
                 {brand.address.street}
                 <br />
                 {brand.address.postal} {brand.address.city}
               </p>
               <a href={brand.phoneHref} className="vv-foot__contact">
-                <Phone size={14} weight="fill" aria-hidden />
+                <Phone size={13} weight="fill" aria-hidden />
                 {brand.phone}
               </a>
               <a href={brand.emailHref} className="vv-foot__contact">
-                <EnvelopeSimple size={14} weight="fill" aria-hidden />
+                <EnvelopeSimple size={13} weight="fill" aria-hidden />
                 {brand.email}
               </a>
             </address>
@@ -123,11 +133,19 @@ export function Footer() {
             <div className="vv-foot__social">
               <p className="vv-foot__heading">Volg ons</p>
               <div className="vv-foot__social-row">
-                <span className="vv-foot__social-btn" aria-disabled="true" title="Binnenkort">
-                  <InstagramLogo size={16} weight="fill" aria-hidden />
+                <span
+                  className="vv-foot__social-btn"
+                  aria-disabled="true"
+                  title="Binnenkort"
+                >
+                  <InstagramLogo size={15} weight="fill" aria-hidden />
                 </span>
-                <span className="vv-foot__social-btn" aria-disabled="true" title="Binnenkort">
-                  <FacebookLogo size={16} weight="fill" aria-hidden />
+                <span
+                  className="vv-foot__social-btn"
+                  aria-disabled="true"
+                  title="Binnenkort"
+                >
+                  <FacebookLogo size={15} weight="fill" aria-hidden />
                 </span>
               </div>
             </div>
@@ -146,14 +164,35 @@ export function Footer() {
         </div>
 
         <div className="vv-foot__recommend">
-          <p className="vv-foot__recommend-label">Onze regio's</p>
+          <div className="vv-foot__recommend-rule">
+            <span>Onze regio's</span>
+          </div>
           <div className="vv-foot__recommend-row">
-            {regions.map((region, index) => (
-              <span key={region.id} className="vv-foot__recommend-item">
-                {index > 0 ? <span className="vv-foot__dot" aria-hidden /> : null}
-                {region.name}
-              </span>
-            ))}
+            <div className="vv-foot__recommend-side">
+              {regionsLeft.map((region, index) => (
+                <span key={region.id} className="vv-foot__recommend-item">
+                  {index > 0 ? (
+                    <span className="vv-foot__dot" aria-hidden />
+                  ) : null}
+                  {region.name}
+                </span>
+              ))}
+            </div>
+
+            <div className="vv-foot__recommend-brand">
+              <BrandLogo compact />
+            </div>
+
+            <div className="vv-foot__recommend-side vv-foot__recommend-side--end">
+              {regionsRight.map((region, index) => (
+                <span key={region.id} className="vv-foot__recommend-item">
+                  {index > 0 ? (
+                    <span className="vv-foot__dot" aria-hidden />
+                  ) : null}
+                  {region.name}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -161,7 +200,10 @@ export function Footer() {
           <p>
             © {year} {brand.name}
           </p>
-          <p>{brand.tagline}</p>
+          <p className="vv-foot__legal-tag">{brand.tagline}</p>
+          <p>
+            <span aria-disabled="true">Privacybeleid</span>
+          </p>
         </div>
       </div>
     </footer>
