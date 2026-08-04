@@ -157,7 +157,7 @@ export function Footer() {
                 aria-disabled="true"
                 title="Binnenkort beschikbaar"
               >
-                Gratis proefles
+                <span>Gratis proefles</span>
               </span>
             </div>
           </div>
