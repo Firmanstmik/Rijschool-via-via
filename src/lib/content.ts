@@ -38,29 +38,28 @@ export const trustSignals = [
 export const heroFeatures = [
   {
     title: 'RIS gecertificeerd',
-    detail: 'Officiële partner, hoger slagingspercentage',
+    detail: 'Officiële partner in rijopleiding',
   },
   {
     title: 'Audi Q3 Sportback',
-    detail: 'Veilig, modern en CBR-goedgekeurd',
+    detail: 'CBR-goedgekeurde leswagen',
   },
   {
     title: '7 dagen per week',
-    detail: 'Flexibel plannen, ook in het weekend',
+    detail: 'Ook in het weekend bereikbaar',
   },
 ] as const
 
 export const heroBadges = [
   {
-    eyebrow: 'Kennismaking',
-    value: 'Gratis',
-    detail: 'Jouw eerste les is vrijblijvend',
+    eyebrow: 'Aanpak',
+    value: 'Persoonlijk',
+    detail: 'Vaste instructeur, jouw traject',
   },
   {
     eyebrow: 'Beschikbaar',
-    value: '7',
-    unit: 'dagen',
-    detail: 'Open, inclusief weekenden',
+    value: 'Hele week',
+    detail: 'Ook in het weekend',
   },
 ] as const
 
@@ -170,12 +169,11 @@ export const serviceCards = [
 
 export const home = {
   hero: {
-    eyebrow: 'Rijschool Via Via Leiderdorp',
-    title: 'Rijplezier',
-    lead:
-      'Wil jij op een ontspannen en doeltreffende manier autorijles krijgen, waarbij je naast techniek en veilig rijden ook naar je zin hebt? Wij zorgen dat jij met een goed gevoel in de auto stapt.',
-    ctaPrimary: 'Gratis kennismaking',
-    ctaSecondary: 'Onze aanpak',
+    eyebrow: 'Rijschool Via Via',
+    title: 'Kwaliteit',
+    lead: 'Vakmanschap, rust en persoonlijke begeleiding.',
+    ctaPrimary: 'Onze aanpak',
+    ctaSecondary: 'Kennismaking',
   },
   philosophy: {
     eyebrow: 'Onze filosofie',
