@@ -2351,37 +2351,57 @@ html.vv-topbar-collapsed {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.4rem;
-  color: rgba(243, 230, 212, 0.62);
+  gap: 0.45rem;
+  padding: 0.35rem;
+  color: rgba(243, 230, 212, 0.55);
   transition: color 0.4s var(--vv-ease);
 }
 
 .vv-showroom__scroll:hover {
-  color: rgba(185, 169, 148, 0.82);
+  color: rgba(185, 169, 148, 0.78);
   transform: none;
 }
 
 .vv-showroom__scroll:focus-visible {
   outline: 1px solid rgba(185, 169, 148, 0.45);
   outline-offset: 4px;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
 }
 
 .vv-showroom__scroll-ring {
-  display: none;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(8, 10, 14, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: none;
 }
 
 .vv-showroom__scroll-glow {
-  display: none;
+  position: absolute;
+  inset: -18%;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    rgba(185, 169, 148, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0.55;
+  animation: none;
 }
 
 .vv-showroom__scroll-mouse {
   position: relative;
   z-index: 1;
-  width: 0.82rem;
-  height: 1.28rem;
-  border: 1.5px solid rgba(243, 230, 212, 0.58);
+  width: 0.72rem;
+  height: 1.12rem;
+  border: 1px solid rgba(243, 230, 212, 0.55);
   border-radius: 999px;
   box-shadow: none;
   background: transparent;
@@ -2390,27 +2410,37 @@ html.vv-topbar-collapsed {
 .vv-showroom__scroll-wheel {
   position: absolute;
   left: 50%;
-  top: 0.26rem;
-  width: 0.14rem;
-  height: 0.24rem;
-  margin-left: -0.07rem;
+  top: 0.22rem;
+  width: 0.12rem;
+  height: 0.22rem;
+  margin-left: -0.06rem;
   border-radius: 999px;
-  background: rgba(185, 169, 148, 0.78);
+  background: rgba(185, 169, 148, 0.8);
   box-shadow: none;
 }
 
 .vv-showroom__scroll-label {
   display: block;
-  font-size: 0.52rem;
+  font-size: 0.5rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   color: inherit;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .vv-showroom__scroll-line {
-  display: none;
+  display: block;
+  width: 1px;
+  height: 1.35rem;
+  background: linear-gradient(
+    180deg,
+    rgba(185, 169, 148, 0.45) 0%,
+    transparent 100%
+  );
+  transform-origin: top center;
+  animation: none;
+  opacity: 0.7;
 }
 
 @keyframes vv-scroll-glow {
@@ -2449,8 +2479,8 @@ html.vv-topbar-collapsed {
     bottom: max(0.85rem, env(safe-area-inset-bottom, 0px));
   }
 
-  .vv-showroom__scroll-label {
-    display: block;
+  .vv-showroom__scroll-line {
+    height: 1.1rem;
   }
 }
 

@@ -210,22 +210,26 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.4, ease, delay: 2.95 }}
         >
-          <span className="vv-showroom__scroll-mouse" aria-hidden>
-            <motion.span
-              className="vv-showroom__scroll-wheel"
-              animate={
-                reduce
-                  ? undefined
-                  : { y: [0, 5, 0], opacity: [0.45, 0.85, 0.45] }
-              }
-              transition={{
-                duration: 2.8,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            />
+          <span className="vv-showroom__scroll-ring" aria-hidden>
+            <span className="vv-showroom__scroll-glow" />
+            <span className="vv-showroom__scroll-mouse">
+              <motion.span
+                className="vv-showroom__scroll-wheel"
+                animate={
+                  reduce
+                    ? undefined
+                    : { y: [0, 6, 0], opacity: [0.35, 0.9, 0.35] }
+                }
+                transition={{
+                  duration: 2.6,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />
+            </span>
           </span>
           <span className="vv-showroom__scroll-label">Scroll</span>
+          <span className="vv-showroom__scroll-line" aria-hidden />
         </motion.a>
       </motion.div>
     </section>
