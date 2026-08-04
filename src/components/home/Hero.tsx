@@ -21,7 +21,7 @@ import {
   images,
 } from '@/lib/content'
 
-const ease = [0.16, 1, 0.3, 1] as const
+const ease = [0.22, 1, 0.36, 1] as const
 const featureIcons = [SealCheck, CarProfile, CalendarBlank] as const
 
 export function Hero() {
@@ -33,19 +33,19 @@ export function Hero() {
   })
 
   const progress = useSpring(scrollYProgress, {
-    stiffness: 68,
-    damping: 30,
-    mass: 0.5,
+    stiffness: 58,
+    damping: 32,
+    mass: 0.55,
     restDelta: 0.001,
   })
 
-  const imgY = useTransform(progress, [0, 1], ['0%', '10%'])
-  const imgScale = useTransform(progress, [0, 1], [1.05, 1.12])
-  const veilOpacity = useTransform(progress, [0, 0.45, 0.85], [0, 0.28, 0.72])
-  const contentOpacity = useTransform(progress, [0, 0.35, 0.62], [1, 0.9, 0])
-  const contentY = useTransform(progress, [0, 1], ['0%', '12%'])
-  const scrollOpacity = useTransform(progress, [0, 0.28, 0.5], [1, 0.45, 0])
-  const scrollY = useTransform(progress, [0, 0.5], [0, 18])
+  const imgY = useTransform(progress, [0, 1], ['0%', '6%'])
+  const imgScale = useTransform(progress, [0, 1], [1.03, 1.08])
+  const veilOpacity = useTransform(progress, [0, 0.5, 0.9], [0, 0.16, 0.62])
+  const contentOpacity = useTransform(progress, [0, 0.4, 0.68], [1, 0.94, 0])
+  const contentY = useTransform(progress, [0, 1], ['0%', '8%'])
+  const scrollOpacity = useTransform(progress, [0, 0.25, 0.48], [1, 0.35, 0])
+  const scrollY = useTransform(progress, [0, 0.5], [0, 10])
 
   return (
     <section id="top" ref={ref} className="vv-showroom" aria-label="Hero">
@@ -61,9 +61,9 @@ export function Hero() {
             width={1920}
             height={1080}
             fetchPriority="high"
-            initial={reduce ? false : { scale: 1.1, opacity: 0.35 }}
+            initial={reduce ? false : { scale: 1.04, opacity: 0.55 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 3.2, ease }}
           />
         </motion.div>
 
@@ -88,12 +88,12 @@ export function Hero() {
               <motion.div
                 key={item.title}
                 className="vv-showroom__feature"
-                initial={reduce ? false : { opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, ease, delay: 0.55 + i * 0.1 }}
+                initial={reduce ? false : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.4, ease, delay: 2.35 + i * 0.14 }}
               >
                 <span className="vv-showroom__feature-mark" aria-hidden>
-                  <Icon size={18} weight="light" />
+                  <Icon size={14} weight="regular" />
                 </span>
                 <div>
                   <p className="vv-showroom__feature-title">{item.title}</p>
@@ -107,9 +107,9 @@ export function Hero() {
         <div className="vv-showroom__center">
           <motion.p
             className="vv-showroom__eyebrow"
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease, delay: 0.2 }}
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.25, ease, delay: 0.85 }}
           >
             {home.hero.eyebrow}
           </motion.p>
@@ -117,9 +117,9 @@ export function Hero() {
           <h1 className="vv-showroom__title">
             <span className="vv-showroom__title-mask">
               <motion.span
-                initial={reduce ? false : { y: '108%' }}
+                initial={reduce ? false : { y: '105%' }}
                 animate={{ y: '0%' }}
-                transition={{ duration: 1.35, ease, delay: 0.32 }}
+                transition={{ duration: 1.55, ease, delay: 1.15 }}
               >
                 {home.hero.title}
               </motion.span>
@@ -128,29 +128,29 @@ export function Hero() {
 
           <motion.p
             className="vv-showroom__lead"
-            initial={reduce ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.05, ease, delay: 0.55 }}
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.3, ease, delay: 1.75 }}
           >
             {home.hero.lead}
           </motion.p>
 
           <motion.div
             className="vv-showroom__actions"
-            initial={reduce ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease, delay: 0.72 }}
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease, delay: 2.05 }}
           >
+            <a href="#aanpak" className="vv-btn vv-btn--primary vv-btn--showroom">
+              <span>{home.hero.ctaPrimary}</span>
+            </a>
             <span
-              className="vv-btn vv-btn--primary vv-btn--showroom"
+              className="vv-btn vv-btn--ghost vv-btn--showroom vv-btn--showroom-soft"
               aria-disabled="true"
               title="Binnenkort beschikbaar"
             >
-              <span>{home.hero.ctaPrimary}</span>
-            </span>
-            <a href="#aanbod" className="vv-btn vv-btn--ghost vv-btn--showroom">
               <span>{home.hero.ctaSecondary}</span>
-            </a>
+            </span>
           </motion.div>
         </div>
 
@@ -159,9 +159,9 @@ export function Hero() {
             <motion.div
               key={badge.eyebrow}
               className="vv-showroom__badge"
-              initial={reduce ? false : { opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease, delay: 0.62 + i * 0.12 }}
+              initial={reduce ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.4, ease, delay: 2.45 + i * 0.14 }}
             >
               <p className="vv-showroom__badge-eyebrow">{badge.eyebrow}</p>
               <p className="vv-showroom__badge-value">
@@ -176,23 +176,23 @@ export function Hero() {
 
           <motion.div
             className="vv-showroom__contact"
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.95, ease, delay: 0.9 }}
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.25, ease, delay: 2.75 }}
           >
             <a
               href={brand.phoneHref}
               className="vv-showroom__contact-link"
               aria-label={`Bel ${brand.phone}`}
             >
-              <Phone size={16} weight="light" aria-hidden />
+              <Phone size={14} weight="regular" aria-hidden />
             </a>
             <a
               href={brand.emailHref}
               className="vv-showroom__contact-link"
               aria-label={`Mail ${brand.email}`}
             >
-              <EnvelopeSimple size={16} weight="light" aria-hidden />
+              <EnvelopeSimple size={14} weight="regular" aria-hidden />
             </a>
           </motion.div>
         </aside>
@@ -206,30 +206,26 @@ export function Hero() {
           href="#leswagen"
           className="vv-showroom__scroll"
           aria-label="Scroll naar onze leswagen"
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease, delay: 1.15 }}
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.4, ease, delay: 2.95 }}
         >
-          <span className="vv-showroom__scroll-ring" aria-hidden>
-            <span className="vv-showroom__scroll-glow" />
-            <span className="vv-showroom__scroll-mouse">
-              <motion.span
-                className="vv-showroom__scroll-wheel"
-                animate={
-                  reduce
-                    ? undefined
-                    : { y: [0, 8, 0], opacity: [0.3, 1, 0.3] }
-                }
-                transition={{
-                  duration: 1.85,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-            </span>
+          <span className="vv-showroom__scroll-mouse" aria-hidden>
+            <motion.span
+              className="vv-showroom__scroll-wheel"
+              animate={
+                reduce
+                  ? undefined
+                  : { y: [0, 5, 0], opacity: [0.45, 0.85, 0.45] }
+              }
+              transition={{
+                duration: 2.8,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            />
           </span>
           <span className="vv-showroom__scroll-label">Scroll</span>
-          <span className="vv-showroom__scroll-line" aria-hidden />
         </motion.a>
       </motion.div>
     </section>
