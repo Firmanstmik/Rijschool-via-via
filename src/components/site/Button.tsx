@@ -25,7 +25,7 @@ export function Button({
       )}
       {...props}
     >
-      <span>{children}</span>
+      <span className="vv-btn__label">{children}</span>
       {showArrow ? <ArrowRight size={15} strokeWidth={1.75} aria-hidden /> : null}
     </button>
   )
@@ -53,7 +53,7 @@ export function ButtonLink({
         className,
       )}
     >
-      <span>{children}</span>
+      <span className="vv-btn__label">{children}</span>
       {showArrow ? <ArrowRight size={15} strokeWidth={1.75} aria-hidden /> : null}
     </a>
   )
