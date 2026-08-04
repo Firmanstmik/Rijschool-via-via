@@ -176,10 +176,10 @@ export const home = {
     ctaSecondary: 'Kennismaking',
   },
   philosophy: {
-    eyebrow: 'Onze filosofie',
+    eyebrow: 'Filosofie',
     title: 'Je rijbewijs is een investering voor de rest van je leven.',
     lead:
-      'Je rijbewijs halen is een grote stap naar meer mobiliteit. Daarom is de keuze voor de juiste rijschool essentieel.',
+      'Vrijheid begint met vakmanschap. Wij begeleiden die investering met rust, precisie en verantwoordelijkheid.',
     col1:
       'Je rijbewijs halen is een grote stap naar meer mobiliteit. Vaak heb je lang gespaard of betalen je ouders je rijopleiding. Daarom is de keuze voor de juiste rijschool essentieel: betrouwbaarheid, vakbekwaamheid en een juiste prijs-kwaliteitverhouding.',
     col2:
@@ -190,7 +190,7 @@ export const home = {
         id: 'trust',
         num: '01',
         title: 'Betrouwbaarheid',
-        body: 'Vaak heb je lang gespaard of betalen je ouders je rijopleiding. Jij verdient een rijschool die die investering serieus neemt.',
+        body: 'Een rijopleiding is een serieuze investering. Wij behandelen die met dezelfde zorg als jij.',
         icon: 'shield' as const,
         featured: false,
       },
@@ -198,15 +198,15 @@ export const home = {
         id: 'skill',
         num: '02',
         title: 'Vakbekwaamheid',
-        body: 'Persoonlijke begeleiding, enthousiasme en kennis van de nieuwste verkeersinzichten, zodat jij met vertrouwen je rijbewijs haalt.',
+        body: 'Persoonlijke begeleiding en actuele verkeerskennis. Rust achter het stuur, zekerheid op de weg.',
         icon: 'seal' as const,
-        featured: true,
+        featured: false,
       },
       {
         id: 'value',
         num: '03',
-        title: 'Prijs-kwaliteit',
-        body: 'Efficiënte lessen op jouw tempo, zodat je nooit te veel lessen hebt en sneller klaar bent voor de weg.',
+        title: 'Verantwoordelijkheid',
+        body: 'Lessen op jouw tempo. Gericht, zorgvuldig en zonder overbodige stappen.',
         icon: 'scale' as const,
         featured: false,
       },
