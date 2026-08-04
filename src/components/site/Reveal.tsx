@@ -51,9 +51,13 @@ export function Reveal({
 export function RevealStagger({
   children,
   className,
+  delayChildren = 0.1,
+  staggerChildren = 0.14,
 }: {
   children: ReactNode
   className?: string
+  delayChildren?: number
+  staggerChildren?: number
 }) {
   const reduce = useReducedMotion()
 
@@ -70,7 +74,7 @@ export function RevealStagger({
       variants={{
         hidden: {},
         visible: {
-          transition: { staggerChildren: 0.14, delayChildren: 0.1 },
+          transition: { staggerChildren, delayChildren },
         },
       }}
     >

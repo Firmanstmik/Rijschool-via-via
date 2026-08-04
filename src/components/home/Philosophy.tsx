@@ -1,12 +1,6 @@
-import {
-  ArrowRight,
-  Scales,
-  SealCheck,
-  ShieldCheck,
-} from '@phosphor-icons/react'
+import { Scales, SealCheck, ShieldCheck } from '@phosphor-icons/react'
 import { Reveal, RevealItem, RevealStagger } from '@/components/site/Reveal'
 import { home } from '@/lib/content'
-import { cn } from '@/lib/cn'
 
 const icons = {
   shield: ShieldCheck,
@@ -27,43 +21,40 @@ export function Philosophy() {
       <div className="vv-invest__glow" aria-hidden />
 
       <div className="vv-shell vv-invest__shell">
-        <Reveal className="vv-invest__header">
-          <p className="vv-invest__eyebrow">{philosophy.eyebrow}</p>
-          <h2 id="philosophy-heading" className="vv-invest__title">
-            {philosophy.title}
-          </h2>
-          <p className="vv-invest__lead">{philosophy.lead}</p>
-        </Reveal>
+        <header className="vv-invest__header">
+          <Reveal delay={0.08}>
+            <p className="vv-invest__eyebrow">{philosophy.eyebrow}</p>
+          </Reveal>
 
-        <RevealStagger className="vv-invest__cards">
+          <Reveal delay={0.32}>
+            <h2 id="philosophy-heading" className="vv-invest__title">
+              {philosophy.title}
+            </h2>
+          </Reveal>
+
+          <Reveal delay={0.78}>
+            <p className="vv-invest__lead">{philosophy.lead}</p>
+          </Reveal>
+        </header>
+
+        <RevealStagger
+          className="vv-invest__cards"
+          delayChildren={1.15}
+          staggerChildren={0.2}
+        >
           {philosophy.pillars.map((pillar) => {
             const Icon = icons[pillar.icon]
-            const featured = pillar.featured
 
             return (
               <RevealItem key={pillar.id}>
-                <article
-                  className={cn(
-                    'vv-invest-card',
-                    featured && 'vv-invest-card--featured',
-                  )}
-                >
+                <article className="vv-invest-card">
                   <div className="vv-invest-card__icon" aria-hidden>
-                    <Icon size={28} weight={featured ? 'fill' : 'duotone'} />
+                    <Icon size={14} weight="light" />
                   </div>
 
                   <p className="vv-invest-card__num">{pillar.num}</p>
                   <h3 className="vv-invest-card__title">{pillar.title}</h3>
                   <p className="vv-invest-card__body">{pillar.body}</p>
-
-                  {featured ? (
-                    <a href="#aanpak" className="vv-invest-card__cta">
-                      <span>{philosophy.cta}</span>
-                      <ArrowRight size={16} weight="bold" aria-hidden />
-                    </a>
-                  ) : (
-                    <span className="vv-invest-card__spacer" aria-hidden />
-                  )}
                 </article>
               </RevealItem>
             )
