@@ -164,12 +164,7 @@ export function Hero() {
               transition={{ duration: 1.4, ease, delay: 2.45 + i * 0.14 }}
             >
               <p className="vv-showroom__badge-eyebrow">{badge.eyebrow}</p>
-              <p className="vv-showroom__badge-value">
-                {badge.value}
-                {'unit' in badge && badge.unit ? (
-                  <span className="vv-showroom__badge-unit">{badge.unit}</span>
-                ) : null}
-              </p>
+              <p className="vv-showroom__badge-value">{badge.value}</p>
               <p className="vv-showroom__badge-detail">{badge.detail}</p>
             </motion.div>
           ))}
@@ -211,17 +206,16 @@ export function Hero() {
           transition={{ duration: 1.4, ease, delay: 2.95 }}
         >
           <span className="vv-showroom__scroll-ring" aria-hidden>
-            <span className="vv-showroom__scroll-glow" />
             <span className="vv-showroom__scroll-mouse">
               <motion.span
                 className="vv-showroom__scroll-wheel"
                 animate={
                   reduce
                     ? undefined
-                    : { y: [0, 6, 0], opacity: [0.35, 0.9, 0.35] }
+                    : { y: [0, 6, 0], opacity: [0.4, 1, 0.4] }
                 }
                 transition={{
-                  duration: 2.6,
+                  duration: 2.4,
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
