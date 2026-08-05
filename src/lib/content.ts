@@ -252,7 +252,7 @@ export const home = {
     body2:
       'Geen druk. Geen haast. Wel aandacht voor jouw vragen, jouw tempo en jouw groei.',
     body3:
-      'Van Leiden tot Zoeterwoude: dichtbij, persoonlijk, en altijd met dezelfde begeleider.',
+      'Van Leiden tot Zoeterwoude: dichtbij, persoonlijk, altijd dezelfde begeleider.',
     heroImage: '/images/experience-trust.png',
     heroAlt:
       'Instructeur en leerling in een rustig gesprek tijdens de rijles — warm licht, Leiden op de achtergrond',
@@ -265,21 +265,21 @@ export const home = {
         id: 'steps',
         num: '01',
         title: 'Stap voor stap',
-        body: 'We bouwen samen rustig op — met heldere doelen en feedback die je verder helpt.',
+        body: 'Heldere doelen. Feedback die je verder helpt.',
         icon: 'steps' as const,
       },
       {
         id: 'guide',
         num: '02',
         title: 'Persoonlijke begeleiding',
-        body: 'Altijd dezelfde instructeur. Iemand die jou kent, en die blijft.',
+        body: 'Altijd dezelfde instructeur. Iemand die blijft.',
         icon: 'guide' as const,
       },
       {
         id: 'calm',
         num: '03',
         title: 'Rust en vertrouwen',
-        body: 'Een sfeer waarin vragen mogen — en zekerheid vanzelf groeit.',
+        body: 'Vragen mogen. Zekerheid groeit vanzelf.',
         icon: 'calm' as const,
       },
     ],
