@@ -8,7 +8,7 @@ import {
 } from 'framer-motion'
 import {
   SealCheck,
-  CarProfile,
+  UserFocus,
   CalendarBlank,
   EnvelopeSimple,
   Phone,
@@ -22,7 +22,7 @@ import {
 } from '@/lib/content'
 
 const ease = [0.22, 1, 0.36, 1] as const
-const featureIcons = [SealCheck, CarProfile, CalendarBlank] as const
+const featureIcons = [SealCheck, UserFocus, CalendarBlank] as const
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null)
@@ -56,13 +56,13 @@ export function Hero() {
         >
           <motion.img
             src={images.hero}
-            alt="Audi Q3 Sportback leswagen van Rijschool Via Via"
+            alt=""
             className="vv-showroom__img"
             width={1920}
             height={1080}
             fetchPriority="high"
-            initial={reduce ? false : { scale: 1.04, opacity: 0.55 }}
-            animate={{ scale: 1, opacity: 1 }}
+            initial={reduce ? false : { scale: 1.04, opacity: 0.48 }}
+            animate={{ scale: 1, opacity: 0.78 }}
             transition={{ duration: 3.2, ease }}
           />
         </motion.div>
@@ -198,9 +198,9 @@ export function Hero() {
         style={reduce ? undefined : { opacity: scrollOpacity, y: scrollY }}
       >
         <motion.a
-          href="#leswagen"
+          href="#aanpak"
           className="vv-showroom__scroll"
-          aria-label="Scroll naar onze leswagen"
+          aria-label="Scroll naar onze aanpak"
           initial={reduce ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.4, ease, delay: 2.95 }}

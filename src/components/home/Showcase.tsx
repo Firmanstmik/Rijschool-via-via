@@ -5,7 +5,6 @@ import {
   useRef,
   useState,
 } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
 import { Reveal, RevealItem, RevealStagger } from '@/components/site/Reveal'
 import { showcase } from '@/lib/content'
 import { BrandLogo } from '@/components/site/BrandLogo'
@@ -19,7 +18,6 @@ type LeaderLine = {
 }
 
 export function Showcase() {
-  const reduce = useReducedMotion()
   const [active, setActive] = useState<string>(showcase.hotspots[0].id)
   const lineId = useId()
   const diagramRef = useRef<HTMLDivElement>(null)
@@ -123,19 +121,28 @@ export function Showcase() {
 
       <div className="vv-shell">
         <RevealStagger className="vv-plate__gallery">
-          {showcase.gallery.map((card) => (
+          {showcase.gallery.map((card, index) => (
             <RevealItem key={card.label}>
-              <article className="vv-plate-card">
+              <article
+                className={cn(
+                  'vv-plate-card',
+                  `vv-plate-card--${card.crop}`,
+                  `vv-plate-card--step-${index + 1}`,
+                )}
+              >
                 <div className="vv-plate-card__media">
                   <img
                     src={card.image}
-                    alt=""
+                    alt={card.alt}
                     loading="lazy"
                     width={720}
                     height={960}
                   />
                 </div>
                 <div className="vv-plate-card__body">
+                  <p className="vv-plate-card__step" aria-hidden>
+                    {String(index + 1).padStart(2, '0')}
+                  </p>
                   <h3 className="vv-plate-card__label">{card.label}</h3>
                   <p className="vv-plate-card__text">{card.body}</p>
                 </div>
@@ -146,6 +153,7 @@ export function Showcase() {
       </div>
 
       <Reveal className="vv-shell vv-hotspot" delay={0.08}>
+        <p className="vv-hotspot__proof">Ondersteunend · kwaliteit in dienst van de les</p>
         <div className="vv-hotspot__diagram" ref={diagramRef}>
           <svg
             className="vv-hotspot__leaders"
@@ -161,10 +169,10 @@ export function Showcase() {
                 x2="1"
                 y2="0"
               >
-                <stop offset="0%" stopColor="rgba(185,169,148,0.08)" />
-                <stop offset="35%" stopColor="rgba(226,212,188,0.75)" />
-                <stop offset="65%" stopColor="rgba(226,212,188,0.75)" />
-                <stop offset="100%" stopColor="rgba(185,169,148,0.08)" />
+                <stop offset="0%" stopColor="rgba(185,169,148,0.04)" />
+                <stop offset="35%" stopColor="rgba(226,212,188,0.4)" />
+                <stop offset="65%" stopColor="rgba(226,212,188,0.4)" />
+                <stop offset="100%" stopColor="rgba(185,169,148,0.04)" />
               </linearGradient>
             </defs>
             {leaders.map((line) => (
@@ -201,7 +209,7 @@ export function Showcase() {
             <div className="vv-hotspot__car" ref={carRef}>
               <img
                 src={showcase.image}
-                alt="Audi Q3 Sportback leswagen van Rijschool Via Via"
+                alt=""
                 className="vv-hotspot__img"
                 width={1181}
                 height={534}
@@ -213,7 +221,6 @@ export function Showcase() {
                   key={spot.id}
                   spot={spot}
                   active={active === spot.id}
-                  reduce={!!reduce}
                   onActivate={() => setActive(spot.id)}
                 />
               ))}
@@ -258,7 +265,7 @@ export function Showcase() {
       </Reveal>
 
       <Reveal className="vv-plate__cta-wrap" delay={0.14}>
-        <a href="#aanbod" className="vv-btn vv-btn--primary vv-btn--showroom">
+        <a href="#aanpak" className="vv-btn vv-btn--primary vv-btn--showroom">
           <span>{showcase.cta}</span>
         </a>
       </Reveal>
@@ -269,12 +276,10 @@ export function Showcase() {
 function HotspotPin({
   spot,
   active,
-  reduce,
   onActivate,
 }: {
   spot: Hotspot
   active: boolean
-  reduce: boolean
   onActivate: () => void
 }) {
   return (
@@ -290,14 +295,6 @@ function HotspotPin({
     >
       <span className="vv-hotspot__pin-ring" aria-hidden />
       <span className="vv-hotspot__pin-core" aria-hidden />
-      {!reduce ? (
-        <motion.span
-          className="vv-hotspot__pin-pulse"
-          aria-hidden
-          animate={{ scale: [1, 2.1], opacity: [0.5, 0] }}
-          transition={{ duration: 2.4, repeat: Infinity, ease: 'easeOut' }}
-        />
-      ) : null}
     </button>
   )
 }

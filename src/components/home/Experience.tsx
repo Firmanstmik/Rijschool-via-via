@@ -54,6 +54,7 @@ export function Experience() {
             </h2>
             <p className="vv-velocity__lead">{experience.pull}</p>
             <p className="vv-velocity__body">{experience.body1}</p>
+            <p className="vv-velocity__body">{experience.body2}</p>
           </Reveal>
         </div>
 

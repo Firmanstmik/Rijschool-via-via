@@ -37,7 +37,7 @@ export function ServiceArea() {
             <div className="vv-atlas__frame">
               <img
                 src={images.region}
-                alt="Leswagen van Rijschool Via Via in de regio Leiden"
+                alt="Rijles in de regio Leiden bij Rijschool Via Via"
                 className="vv-atlas__img"
                 width={1400}
                 height={900}
@@ -66,7 +66,7 @@ export function ServiceArea() {
           </Reveal>
 
           <Reveal className="vv-atlas__panel" delay={0.1} variant="slide">
-            <p className="vv-atlas__panel-kicker">Onze dekking</p>
+            <p className="vv-atlas__panel-kicker">Dichtbij leren</p>
             <p className="vv-atlas__panel-active">
               <MapPin size={16} weight="fill" aria-hidden />
               <span>{activeRegion.name}</span>

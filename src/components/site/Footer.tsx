@@ -8,9 +8,9 @@ import { BrandLogo } from '@/components/site/BrandLogo'
 import { brand, footerLinks, images, regions } from '@/lib/content'
 
 const experienceLinks = [
-  'RIS methode',
-  'Automaat of schakel',
+  'Onze aanpak',
   'Vaste instructeur',
+  'Persoonlijk leerplan',
   'Gratis proefles',
   '7 dagen per week',
 ] as const
@@ -34,7 +34,7 @@ export function Footer() {
     <footer className="vv-foot">
       <div className="vv-foot__bg" aria-hidden>
         <img
-          src={images.exterior}
+          src={images.approach}
           alt=""
           className="vv-foot__bg-img"
           width={1920}
