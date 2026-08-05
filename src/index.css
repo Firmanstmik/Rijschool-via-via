@@ -3484,7 +3484,6 @@ html.vv-topbar-collapsed {
 .vv-conviction__shell {
   position: relative;
   z-index: 1;
-  width: 100%;
 }
 
 .vv-conviction__stage {
@@ -3817,7 +3816,7 @@ html.vv-topbar-collapsed {
   }
 
   .vv-conviction__stage {
-    grid-template-columns: minmax(0, 0.56fr) minmax(0, 0.44fr);
+    grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
     gap: clamp(2rem, 3.5vw, 3.25rem);
     align-items: stretch;
     min-height: calc(100svh - clamp(10rem, 13vh, 12rem));
@@ -3873,8 +3872,8 @@ html.vv-topbar-collapsed {
 
 @media (min-width: 1180px) {
   .vv-conviction__stage {
-    grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
-    gap: 3.5rem;
+    grid-template-columns: minmax(0, 0.5fr) minmax(0, 0.5fr);
+    gap: 3.25rem;
   }
 
   .vv-conviction__title {
