@@ -50,6 +50,7 @@ export function ServicesGrid() {
                 <motion.article
                   className={cn(
                     'vv-service-card',
+                    `vv-service-card--${index + 1}`,
                     isActive && 'is-active',
                   )}
                   onHoverStart={() => setActive(card.title)}
@@ -57,8 +58,8 @@ export function ServicesGrid() {
                   onFocus={() => setActive(card.title)}
                   onBlur={() => setActive(null)}
                   tabIndex={0}
-                  whileHover={reduce ? undefined : { y: -4 }}
-                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={reduce ? undefined : { y: -2 }}
+                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <div className="vv-service-card__copy">
                     <span className="vv-service-card__index" aria-hidden>
@@ -74,7 +75,7 @@ export function ServicesGrid() {
                         aria-hidden
                       />
                       <span className="vv-service-card__hint">
-                        Hoe we begeleiden
+                        Onze aanpak
                         <ArrowUpRight size={14} weight="bold" aria-hidden />
                       </span>
                     </div>
@@ -82,16 +83,16 @@ export function ServicesGrid() {
                   <div className="vv-service-card__media">
                     <motion.img
                       src={card.image}
-                      alt=""
+                      alt={card.alt}
                       loading="lazy"
                       width={480}
                       height={360}
                       animate={
                         reduce
                           ? undefined
-                          : { scale: isActive ? 1.04 : 1.02 }
+                          : { scale: isActive ? 1.03 : 1.01 }
                       }
-                      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
                     />
                     <div className="vv-service-card__shade" aria-hidden />
                     <div className="vv-service-card__shine" aria-hidden />
