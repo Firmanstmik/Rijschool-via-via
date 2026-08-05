@@ -116,27 +116,31 @@ export const showcase = {
 
 export const serviceCards = [
   {
-    title: 'RIS methode',
-    body: 'Officieel gecertificeerd. Rijopleiding in stappen voor een hoger slagingspercentage.',
-    image: '/images/ai-approach.jpg',
+    title: 'Aankomen',
+    body: 'Je stapt uit de dag. Even stil. Hier begint het rustig.',
+    image: '/images/journey-01-arrival.jpg',
+    alt: 'Leerling arriveert; instructeur verwelkomt kalm',
     icon: 'seal' as const,
   },
   {
-    title: 'Jouw manier van leren',
-    body: 'Automaat of schakel: bij Via Via kijken we samen naar wat bij jou past, zodat je ontspannen leert.',
-    image: '/images/ai-approach.jpg',
+    title: 'Verbinding',
+    body: 'Iemand die echt luistert. Vertrouwen groeit in stilte.',
+    image: '/images/journey-02-connection.jpg',
+    alt: 'Oogcontact en rustige verbinding tijdens de les',
     icon: 'car' as const,
   },
   {
-    title: 'Vaste instructeur',
-    body: 'Altijd dezelfde begeleider, die precies weet waar jij staat en wat je nodig hebt.',
-    image: '/images/ai-approach.jpg',
+    title: 'Groei',
+    body: 'Jij rijdt. Adem in. De zekerheid komt van binnenuit.',
+    image: '/images/journey-03-growth.jpg',
+    alt: 'Leerling rijdt met stille focus en concentratie',
     icon: 'user' as const,
   },
   {
-    title: 'Bijzondere rijlessen',
-    body: 'Op eigen tempo, met persoonlijke begeleiding en een duidelijk leerplan.',
-    image: '/images/ai-approach.jpg',
+    title: 'Verder',
+    body: 'De les is klaar. Je merkt het verschil — zonder woorden.',
+    image: '/images/journey-04-resolution.jpg',
+    alt: 'Leerling loopt weg na de les met stil zelfvertrouwen',
     icon: 'spark' as const,
   },
 ] as const
@@ -314,10 +318,10 @@ export const home = {
     ],
   },
   services: {
-    eyebrow: 'Wat wij bieden',
-    title: 'Meer dan alleen rijlessen',
-    lead: 'Persoonlijke begeleiding, een helder leerplan en ruimte om vertrouwen op te bouwen — zodat jij met plezier leert rijden.',
-    cta: 'Gratis proefles aanvragen',
+    eyebrow: 'Het gevoel',
+    title: 'Zekerheid begint met rust.',
+    lead: 'Vier momenten. Eén traject. Van aankomen tot verder gaan — in stilte groeit het vertrouwen.',
+    cta: 'Ervaar Via Via',
   },
 } as const
 
