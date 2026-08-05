@@ -1,10 +1,10 @@
-import { Scales, SealCheck, ShieldCheck } from '@phosphor-icons/react'
+import { Scales, ShieldCheck, Star } from '@phosphor-icons/react'
 import { Reveal, RevealItem, RevealStagger } from '@/components/site/Reveal'
 import { home } from '@/lib/content'
 
 const icons = {
   shield: ShieldCheck,
-  seal: SealCheck,
+  star: Star,
   scale: Scales,
 } as const
 
@@ -17,49 +17,68 @@ export function Philosophy() {
       className="vv-invest"
       aria-labelledby="philosophy-heading"
     >
-      <div className="vv-invest__grid" aria-hidden />
-      <div className="vv-invest__glow" aria-hidden />
+      <div className="vv-invest__hero">
+        <img
+          src={philosophy.heroImage}
+          alt={philosophy.heroAlt}
+          className="vv-invest__hero-img"
+          width={1920}
+          height={1080}
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="vv-invest__hero-shade" aria-hidden />
+        <div className="vv-invest__hero-glow" aria-hidden />
 
-      <div className="vv-shell vv-invest__shell">
-        <header className="vv-invest__header">
-          <Reveal delay={0.08}>
+        <div className="vv-shell vv-invest__hero-copy">
+          <Reveal>
             <p className="vv-invest__eyebrow">{philosophy.eyebrow}</p>
-          </Reveal>
-
-          <Reveal delay={0.32}>
             <h2 id="philosophy-heading" className="vv-invest__title">
               {philosophy.title}
             </h2>
-          </Reveal>
-
-          <Reveal delay={0.78}>
             <p className="vv-invest__lead">{philosophy.lead}</p>
           </Reveal>
-        </header>
+        </div>
+      </div>
 
-        <RevealStagger
-          className="vv-invest__cards"
-          delayChildren={1.15}
-          staggerChildren={0.2}
-        >
-          {philosophy.pillars.map((pillar) => {
-            const Icon = icons[pillar.icon]
+      <div className="vv-invest__body">
+        <div className="vv-shell">
+          <RevealStagger
+            className="vv-invest__pillars"
+            delayChildren={0.12}
+            staggerChildren={0.14}
+          >
+            {philosophy.pillars.map((pillar, index) => {
+              const Icon = icons[pillar.icon]
 
-            return (
-              <RevealItem key={pillar.id}>
-                <article className="vv-invest-card">
-                  <div className="vv-invest-card__icon" aria-hidden>
-                    <Icon size={14} weight="light" />
-                  </div>
+              return (
+                <RevealItem key={pillar.id}>
+                  <article
+                    className="vv-invest-pillar"
+                    data-pillar={pillar.id}
+                    data-last={index === philosophy.pillars.length - 1}
+                  >
+                    <p className="vv-invest-pillar__num" aria-hidden>
+                      {pillar.num}
+                    </p>
+                    <div className="vv-invest-pillar__icon" aria-hidden>
+                      <Icon size={15} weight="light" />
+                    </div>
+                    <h3 className="vv-invest-pillar__title">{pillar.title}</h3>
+                    <p className="vv-invest-pillar__body">{pillar.body}</p>
+                  </article>
+                </RevealItem>
+              )
+            })}
+          </RevealStagger>
 
-                  <p className="vv-invest-card__num">{pillar.num}</p>
-                  <h3 className="vv-invest-card__title">{pillar.title}</h3>
-                  <p className="vv-invest-card__body">{pillar.body}</p>
-                </article>
-              </RevealItem>
-            )
-          })}
-        </RevealStagger>
+          <Reveal className="vv-invest__closing" delay={0.25}>
+            <p className="vv-invest__closing-text">{philosophy.closing}</p>
+            <p className="vv-invest__signature">
+              <span>{philosophy.signature}</span>
+            </p>
+          </Reveal>
+        </div>
       </div>
     </section>
   )
