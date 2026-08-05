@@ -3452,35 +3452,57 @@ html.vv-topbar-collapsed {
     font-size: 0.84rem;
   }
 }
-/* Onze overtuiging â€” human-first editorial */
+/* Onze overtuiging â€” single-viewport human chapter */
 
 .vv-conviction {
   position: relative;
-  padding-block: clamp(5rem, 11vw, 8.5rem);
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(4.5rem, 7vh, 5.5rem);
   background: #060708;
   overflow: hidden;
+}
+
+.vv-conviction__glow {
+  position: absolute;
+  right: -8%;
+  top: 18%;
+  width: min(48vw, 420px);
+  height: min(48vw, 420px);
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(185, 169, 148, 0.07) 0%,
+    transparent 68%
+  );
+  filter: blur(28px);
+  pointer-events: none;
+  animation: vv-conviction-breathe 10s ease-in-out infinite;
 }
 
 .vv-conviction__shell {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .vv-conviction__stage {
   display: grid;
-  gap: clamp(2.75rem, 5.5vw, 4rem);
+  gap: clamp(1.75rem, 4vw, 2.5rem);
 }
 
 .vv-conviction__photo-wrap {
   min-width: 0;
+  height: 100%;
 }
 
 .vv-conviction__photo {
   position: relative;
   margin: 0;
+  height: min(58vh, 420px);
   overflow: hidden;
-  border-radius: 2px;
-  aspect-ratio: 4 / 5;
+  border-radius: 3px;
   background: #090b0e;
 }
 
@@ -3488,8 +3510,10 @@ html.vv-topbar-collapsed {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
-  filter: saturate(0.88) contrast(1.02) brightness(0.94);
+  object-position: center 36%;
+  filter: saturate(0.9) contrast(1.03) brightness(0.95);
+  transform: scale(1.04);
+  animation: vv-conviction-kenburns 26s ease-in-out infinite alternate;
 }
 
 .vv-conviction__photo-shade {
@@ -3498,56 +3522,67 @@ html.vv-topbar-collapsed {
   background:
     linear-gradient(
       180deg,
-      transparent 55%,
-      rgba(6, 7, 8, 0.28) 78%,
-      rgba(6, 7, 8, 0.72) 100%
+      transparent 48%,
+      rgba(6, 7, 8, 0.22) 72%,
+      rgba(6, 7, 8, 0.68) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(6, 7, 8, 0.12) 0%,
+      transparent 40%
     );
   pointer-events: none;
 }
 
 .vv-conviction__quote {
   position: absolute;
-  left: clamp(1.1rem, 2.5vw, 1.5rem);
-  bottom: clamp(1.1rem, 2.5vw, 1.5rem);
-  max-width: min(14rem, 78%);
+  left: clamp(1rem, 2vw, 1.35rem);
+  bottom: clamp(1rem, 2vw, 1.35rem);
+  max-width: min(13.5rem, 78%);
   margin: 0;
 }
 
 .vv-conviction__quote-icon {
   display: block;
-  margin-bottom: 0.4rem;
-  color: rgba(185, 169, 148, 0.45);
+  margin-bottom: 0.35rem;
+  color: rgba(185, 169, 148, 0.48);
 }
 
 .vv-conviction__quote-text {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 400;
   letter-spacing: 0.015em;
-  line-height: 1.5;
-  color: rgba(236, 230, 222, 0.78);
+  line-height: 1.45;
+  color: rgba(236, 230, 222, 0.8);
 }
 
 .vv-conviction__quote-signature {
-  margin: 0.5rem 0 0;
+  margin: 0.4rem 0 0;
   font-family: var(--font-sans);
-  font-size: 0.46rem;
+  font-size: 0.44rem;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: rgba(185, 169, 148, 0.42);
 }
 
+.vv-conviction__rail {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3.5vh, 2.15rem);
+  min-width: 0;
+}
+
 .vv-conviction__copy {
   min-width: 0;
-  padding-top: 0.25rem;
 }
 
 .vv-conviction__eyebrow {
-  margin: 0 0 clamp(1.25rem, 2.5vw, 1.75rem);
+  margin: 0 0 0.85rem;
   font-family: var(--font-sans);
-  font-size: 0.56rem;
+  font-size: 0.54rem;
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
@@ -3556,9 +3591,9 @@ html.vv-topbar-collapsed {
 
 .vv-conviction__title {
   margin: 0;
-  max-width: 11.5em;
+  max-width: 11em;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.6vw, 3.25rem);
+  font-size: clamp(1.75rem, 3.8vw, 2.65rem);
   font-weight: 400;
   letter-spacing: 0.008em;
   line-height: 1.12;
@@ -3567,105 +3602,116 @@ html.vv-topbar-collapsed {
 }
 
 .vv-conviction__prose {
-  margin-top: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-top: 1.15rem;
   display: grid;
-  gap: 1.15rem;
-  max-width: 31rem;
+  gap: 0.7rem;
+  max-width: 29rem;
 }
 
 .vv-conviction__prose p {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.85;
-  letter-spacing: 0.012em;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
   color: rgba(236, 230, 222, 0.5);
   text-wrap: pretty;
 }
 
 .vv-conviction__principles {
   display: grid;
-  gap: clamp(2rem, 4vw, 2.75rem);
+  gap: 1.15rem;
+  padding-top: 0.15rem;
+  border-top: 1px solid rgba(185, 169, 148, 0.1);
 }
 
 .vv-conviction-principle {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  padding-top: 0.15rem;
+  min-width: 0;
 }
 
-.vv-conviction-principle:not([data-last='true'])::after {
-  content: '';
-  position: absolute;
-  top: 0.15rem;
-  right: 0;
-  width: 1px;
-  height: calc(100% - 0.15rem);
-  background: rgba(185, 169, 148, 0.1);
+.vv-conviction-principle__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.45rem;
 }
 
 .vv-conviction-principle__num {
-  margin: 0 0 0.85rem;
   font-family: var(--font-sans);
-  font-size: 0.48rem;
+  font-size: 0.46rem;
   font-weight: 500;
-  letter-spacing: 0.34em;
-  color: rgba(185, 169, 148, 0.36);
+  letter-spacing: 0.28em;
+  color: rgba(185, 169, 148, 0.38);
 }
 
 .vv-conviction-principle__icon {
-  margin-bottom: 0.75rem;
-  color: rgba(185, 169, 148, 0.48);
+  color: rgba(185, 169, 148, 0.5);
+  transition: color 0.45s var(--vv-ease), transform 0.45s var(--vv-ease);
+}
+
+.vv-conviction-principle:hover .vv-conviction-principle__icon {
+  color: rgba(212, 196, 172, 0.78);
+  transform: translateY(-1px);
 }
 
 .vv-conviction-principle__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 400;
-  letter-spacing: 0.03em;
-  color: rgba(236, 230, 222, 0.82);
+  letter-spacing: 0.02em;
+  color: rgba(236, 230, 222, 0.84);
 }
 
 .vv-conviction-principle__body {
-  margin: 0.65rem 0 0;
-  max-width: 15rem;
-  font-size: 0.78rem;
-  line-height: 1.72;
-  color: rgba(236, 230, 222, 0.4);
+  margin: 0.35rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  color: rgba(236, 230, 222, 0.38);
 }
 
 .vv-conviction__region-wrap {
-  min-width: 0;
+  margin-top: auto;
 }
 
 .vv-conviction__region {
-  padding: clamp(1.35rem, 2.5vw, 1.65rem);
+  padding: 1rem 1.05rem 1.05rem;
   border: 1px solid rgba(185, 169, 148, 0.1);
-  border-radius: 14px;
-  background: rgba(9, 11, 14, 0.72);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      165deg,
+      rgba(18, 20, 24, 0.85) 0%,
+      rgba(9, 11, 14, 0.92) 100%
+    );
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+}
+
+.vv-conviction__region-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .vv-conviction__region-kicker {
-  margin: 0 0 0.85rem;
+  margin: 0;
   font-family: var(--font-sans);
-  font-size: 0.5rem;
+  font-size: 0.48rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(185, 169, 148, 0.42);
+  color: rgba(185, 169, 148, 0.4);
 }
 
 .vv-conviction__region-active {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 0.82rem;
   letter-spacing: 0.02em;
   color: rgba(236, 230, 222, 0.88);
 }
@@ -3675,98 +3721,58 @@ html.vv-topbar-collapsed {
   flex-shrink: 0;
 }
 
-.vv-conviction__region-detail {
-  margin: 0.45rem 0 1.15rem;
-  font-size: 0.78rem;
-  line-height: 1.6;
-  color: rgba(236, 230, 222, 0.42);
-}
-
 .vv-conviction__region-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  gap: 0.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .vv-conviction__region-item {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-  padding: 0.65rem 0.5rem;
-  border: none;
-  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(185, 169, 148, 0.1);
+  border-radius: 999px;
   background: transparent;
-  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: rgba(236, 230, 222, 0.48);
   cursor: pointer;
-  transition: background-color 0.4s var(--vv-ease);
+  transition:
+    color 0.4s var(--vv-ease),
+    border-color 0.4s var(--vv-ease),
+    background-color 0.4s var(--vv-ease);
 }
 
-.vv-conviction__region-item:hover,
+.vv-conviction__region-item:hover {
+  color: rgba(236, 230, 222, 0.72);
+  border-color: rgba(185, 169, 148, 0.22);
+}
+
 .vv-conviction__region-item.is-active {
-  background: rgba(185, 169, 148, 0.05);
+  color: rgba(244, 240, 234, 0.92);
+  border-color: rgba(185, 169, 148, 0.35);
+  background: rgba(185, 169, 148, 0.1);
 }
 
 .vv-conviction__region-item:focus-visible {
-  outline: 1px solid rgba(185, 169, 148, 0.35);
+  outline: 1px solid rgba(185, 169, 148, 0.4);
   outline-offset: 2px;
-}
-
-.vv-conviction__region-index {
-  font-family: var(--font-sans);
-  font-size: 0.46rem;
-  letter-spacing: 0.2em;
-  color: rgba(185, 169, 148, 0.32);
-}
-
-.vv-conviction__region-copy {
-  display: grid;
-  gap: 0.12rem;
-  min-width: 0;
-}
-
-.vv-conviction__region-name {
-  font-size: 0.78rem;
-  color: rgba(236, 230, 222, 0.62);
-  transition: color 0.4s var(--vv-ease);
-}
-
-.vv-conviction__region-item.is-active .vv-conviction__region-name {
-  color: rgba(236, 230, 222, 0.88);
-}
-
-.vv-conviction__region-desc {
-  font-size: 0.68rem;
-  line-height: 1.45;
-  color: rgba(236, 230, 222, 0.32);
-}
-
-.vv-conviction__region-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 999px;
-  background: transparent;
-  transition: background-color 0.4s var(--vv-ease);
-}
-
-.vv-conviction__region-item.is-active .vv-conviction__region-dot {
-  background: rgba(185, 169, 148, 0.55);
 }
 
 .vv-conviction__region-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  margin-top: 1.15rem;
-  padding-top: 1rem;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
   border-top: 1px solid rgba(185, 169, 148, 0.08);
   width: 100%;
-  font-size: 0.68rem;
+  font-size: 0.64rem;
   letter-spacing: 0.06em;
-  color: rgba(185, 169, 148, 0.52);
+  color: rgba(185, 169, 148, 0.5);
   transition: color 0.4s var(--vv-ease);
 }
 
@@ -3782,73 +3788,129 @@ html.vv-topbar-collapsed {
   transform: translateX(2px);
 }
 
-@media (min-width: 960px) {
-  .vv-conviction__stage {
-    grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
-    grid-template-rows: auto auto;
-    column-gap: clamp(2.75rem, 5vw, 4.25rem);
-    row-gap: clamp(3rem, 5vw, 4rem);
-    align-items: start;
+@keyframes vv-conviction-kenburns {
+  0% {
+    transform: scale(1.04) translate3d(0, 0, 0);
   }
 
-  .vv-conviction__photo-wrap {
-    grid-column: 1;
-    grid-row: 1;
+  100% {
+    transform: scale(1.09) translate3d(-1.2%, -0.6%, 0);
+  }
+}
+
+@keyframes vv-conviction-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+@media (min-width: 960px) {
+  .vv-conviction {
+    padding-block: clamp(5rem, 6.5vh, 6rem);
+  }
+
+  .vv-conviction__stage {
+    grid-template-columns: minmax(0, 0.56fr) minmax(0, 0.44fr);
+    gap: clamp(2rem, 3.5vw, 3.25rem);
+    align-items: stretch;
+    min-height: calc(100svh - clamp(10rem, 13vh, 12rem));
+    max-height: calc(100svh - clamp(9rem, 12vh, 11rem));
   }
 
   .vv-conviction__photo {
-    aspect-ratio: 4 / 4.6;
-    min-height: 100%;
+    height: 100%;
+    min-height: 0;
   }
 
-  .vv-conviction__copy {
-    grid-column: 2;
-    grid-row: 1;
-    padding-top: clamp(0.5rem, 2vw, 1.5rem);
-  }
-
-  .vv-conviction__principles {
-    grid-column: 1;
-    grid-row: 2;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(1.5rem, 3vw, 2.25rem);
-    padding-right: 0.5rem;
-  }
-
-  .vv-conviction-principle:not([data-last='true'])::after {
-    right: calc(clamp(0.75rem, 1.5vw, 1.1rem) * -1);
-  }
-
-  .vv-conviction__region-wrap {
-    grid-column: 2;
-    grid-row: 2;
-    align-self: end;
+  .vv-conviction__rail {
+    justify-content: space-between;
+    height: 100%;
+    gap: clamp(1.15rem, 2.4vh, 1.75rem);
+    padding-block: 0.15rem;
   }
 
   .vv-conviction__title {
-    font-size: clamp(2.15rem, 3.5vw, 3.35rem);
+    font-size: clamp(1.9rem, 2.8vw, 2.75rem);
+  }
+
+  .vv-conviction__prose {
+    margin-top: 0.95rem;
+    gap: 0.55rem;
+  }
+
+  .vv-conviction__prose p {
+    font-size: 0.78rem;
+    line-height: 1.65;
+  }
+
+  .vv-conviction__principles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .vv-conviction-principle:not([data-last='true'])::after {
+    content: '';
+    position: absolute;
+    top: 0.15rem;
+    right: -0.5rem;
+    width: 1px;
+    height: calc(100% - 0.2rem);
+    background: rgba(185, 169, 148, 0.1);
+  }
+
+  .vv-conviction-principle__body {
+    max-width: 12.5rem;
   }
 }
 
 @media (min-width: 1180px) {
-  .vv-conviction__prose p {
-    font-size: 0.92rem;
+  .vv-conviction__stage {
+    grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+    gap: 3.5rem;
   }
 
-  .vv-conviction-principle__body {
-    max-width: 16.5rem;
+  .vv-conviction__title {
+    font-size: clamp(2.1rem, 2.6vw, 2.9rem);
+  }
+
+  .vv-conviction__prose p {
+    font-size: 0.82rem;
   }
 }
 
 @media (max-width: 959px) {
-  .vv-conviction-principle:not([data-last='true']) {
-    padding-bottom: 1.75rem;
-    margin-bottom: 0.25rem;
-    border-bottom: 1px solid rgba(185, 169, 148, 0.08);
+  .vv-conviction {
+    min-height: auto;
+    align-items: flex-start;
+    padding-block: clamp(3.5rem, 8vw, 4.5rem);
   }
 
-  .vv-conviction-principle:not([data-last='true'])::after {
-    display: none;
+  .vv-conviction__principles {
+    grid-template-columns: 1fr;
+  }
+
+  .vv-conviction-principle:not([data-last='true']) {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(185, 169, 148, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vv-conviction__photo-img,
+  .vv-conviction__glow {
+    animation: none;
+  }
+
+  .vv-conviction__photo-img {
+    transform: scale(1.04);
   }
 }
 
