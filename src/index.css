@@ -3452,28 +3452,13 @@ html.vv-topbar-collapsed {
     font-size: 0.84rem;
   }
 }
-/* Onze overtuiging â€” editorial conviction */
+/* Onze overtuiging â€” human-first editorial */
 
 .vv-conviction {
   position: relative;
-  padding-block: clamp(4.5rem, 9vw, 7rem);
-  background: #07080b;
+  padding-block: clamp(5rem, 11vw, 8.5rem);
+  background: #060708;
   overflow: hidden;
-}
-
-.vv-conviction::before {
-  content: '';
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 8%,
-    rgba(185, 169, 148, 0.1) 50%,
-    transparent 92%
-  );
-  pointer-events: none;
 }
 
 .vv-conviction__shell {
@@ -3481,321 +3466,389 @@ html.vv-topbar-collapsed {
   z-index: 1;
 }
 
-.vv-conviction__hero {
+.vv-conviction__stage {
   display: grid;
-  gap: clamp(2.25rem, 5vw, 3.5rem);
-  align-items: center;
-  margin-bottom: clamp(3.25rem, 6.5vw, 4.75rem);
+  gap: clamp(2.75rem, 5.5vw, 4rem);
 }
 
-.vv-conviction__media-wrap {
+.vv-conviction__photo-wrap {
   min-width: 0;
 }
 
-.vv-conviction__media {
+.vv-conviction__photo {
   position: relative;
   margin: 0;
   overflow: hidden;
-  border-radius: 4px;
-  aspect-ratio: 16 / 11;
+  border-radius: 2px;
+  aspect-ratio: 4 / 5;
   background: #090b0e;
 }
 
-.vv-conviction__media-img {
+.vv-conviction__photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 42%;
-  filter: saturate(0.82) contrast(1.04) brightness(0.88);
-  transform: scale(1.02);
-  transition: transform 8s ease-out;
+  object-position: center 38%;
+  filter: saturate(0.88) contrast(1.02) brightness(0.94);
 }
 
-.vv-conviction__media:hover .vv-conviction__media-img {
-  transform: scale(1.05);
-}
-
-.vv-conviction__media-shade {
+.vv-conviction__photo-shade {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(
       180deg,
-      transparent 42%,
-      rgba(7, 8, 11, 0.35) 72%,
-      rgba(7, 8, 11, 0.82) 100%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(7, 8, 11, 0.15) 0%,
-      transparent 45%
+      transparent 55%,
+      rgba(6, 7, 8, 0.28) 78%,
+      rgba(6, 7, 8, 0.72) 100%
     );
   pointer-events: none;
 }
 
 .vv-conviction__quote {
   position: absolute;
-  left: clamp(1rem, 2.5vw, 1.35rem);
-  bottom: clamp(1rem, 2.5vw, 1.35rem);
-  max-width: min(16rem, 72%);
-  padding: 0.85rem 1rem 0.95rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 3px;
-  background: rgba(7, 8, 11, 0.62);
-  backdrop-filter: blur(12px) saturate(1.1);
-  -webkit-backdrop-filter: blur(12px) saturate(1.1);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  left: clamp(1.1rem, 2.5vw, 1.5rem);
+  bottom: clamp(1.1rem, 2.5vw, 1.5rem);
+  max-width: min(14rem, 78%);
+  margin: 0;
 }
 
 .vv-conviction__quote-icon {
   display: block;
-  margin-bottom: 0.45rem;
-  color: rgba(185, 169, 148, 0.52);
+  margin-bottom: 0.4rem;
+  color: rgba(185, 169, 148, 0.45);
 }
 
 .vv-conviction__quote-text {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.45;
-  color: rgba(236, 230, 222, 0.82);
+  letter-spacing: 0.015em;
+  line-height: 1.5;
+  color: rgba(236, 230, 222, 0.78);
 }
 
 .vv-conviction__quote-signature {
-  margin: 0.55rem 0 0;
+  margin: 0.5rem 0 0;
   font-family: var(--font-sans);
-  font-size: 0.48rem;
+  font-size: 0.46rem;
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(185, 169, 148, 0.48);
+  color: rgba(185, 169, 148, 0.42);
 }
 
 .vv-conviction__copy {
   min-width: 0;
+  padding-top: 0.25rem;
 }
 
 .vv-conviction__eyebrow {
-  margin: 0 0 0.85rem;
+  margin: 0 0 clamp(1.25rem, 2.5vw, 1.75rem);
   font-family: var(--font-sans);
-  font-size: 0.58rem;
+  font-size: 0.56rem;
   font-weight: 500;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(185, 169, 148, 0.62);
+  color: rgba(185, 169, 148, 0.55);
 }
 
 .vv-conviction__title {
   margin: 0;
+  max-width: 11.5em;
   font-family: var(--font-display);
-  font-size: clamp(1.85rem, 4.2vw, 3rem);
+  font-size: clamp(2rem, 4.6vw, 3.25rem);
   font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.14;
-  color: var(--color-vv-snow);
+  letter-spacing: 0.008em;
+  line-height: 1.12;
+  color: rgba(244, 240, 234, 0.96);
   text-wrap: balance;
 }
 
-.vv-conviction__body {
-  margin: 1rem 0 0;
-  max-width: 30rem;
-  font-size: 0.88rem;
-  line-height: 1.78;
+.vv-conviction__prose {
+  margin-top: clamp(1.75rem, 3.5vw, 2.5rem);
+  display: grid;
+  gap: 1.15rem;
+  max-width: 31rem;
+}
+
+.vv-conviction__prose p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.85;
   letter-spacing: 0.012em;
-  color: rgba(236, 230, 222, 0.52);
+  color: rgba(236, 230, 222, 0.5);
   text-wrap: pretty;
 }
 
-.vv-conviction__pillars {
+.vv-conviction__principles {
   display: grid;
   gap: clamp(2rem, 4vw, 2.75rem);
-  margin-bottom: clamp(2.75rem, 5vw, 3.75rem);
 }
 
-.vv-conviction-pillar {
+.vv-conviction-principle {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-inline: clamp(0.5rem, 2vw, 1.5rem);
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 0.15rem;
 }
 
-.vv-conviction-pillar__num {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin: 0 0 1rem;
+.vv-conviction-principle:not([data-last='true'])::after {
+  content: '';
+  position: absolute;
+  top: 0.15rem;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 0.15rem);
+  background: rgba(185, 169, 148, 0.1);
+}
+
+.vv-conviction-principle__num {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.48rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  color: rgba(185, 169, 148, 0.36);
+}
+
+.vv-conviction-principle__icon {
+  margin-bottom: 0.75rem;
+  color: rgba(185, 169, 148, 0.48);
+}
+
+.vv-conviction-principle__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: rgba(236, 230, 222, 0.82);
+}
+
+.vv-conviction-principle__body {
+  margin: 0.65rem 0 0;
+  max-width: 15rem;
+  font-size: 0.78rem;
+  line-height: 1.72;
+  color: rgba(236, 230, 222, 0.4);
+}
+
+.vv-conviction__region-wrap {
+  min-width: 0;
+}
+
+.vv-conviction__region {
+  padding: clamp(1.35rem, 2.5vw, 1.65rem);
+  border: 1px solid rgba(185, 169, 148, 0.1);
+  border-radius: 14px;
+  background: rgba(9, 11, 14, 0.72);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.vv-conviction__region-kicker {
+  margin: 0 0 0.85rem;
   font-family: var(--font-sans);
   font-size: 0.5rem;
   font-weight: 500;
-  letter-spacing: 0.32em;
-  color: rgba(185, 169, 148, 0.38);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(185, 169, 148, 0.42);
 }
 
-.vv-conviction-pillar__rule {
-  width: 2rem;
-  height: 1px;
-  background: rgba(185, 169, 148, 0.22);
-}
-
-.vv-conviction-pillar__icon {
-  display: grid;
-  place-items: center;
-  width: 2.35rem;
-  height: 2.35rem;
-  margin-bottom: 1rem;
-  border: 1px solid rgba(185, 169, 148, 0.22);
-  border-radius: 999px;
-  color: rgba(185, 169, 148, 0.58);
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      rgba(185, 169, 148, 0.1) 0%,
-      transparent 62%
-    );
-  transition:
-    color 0.5s var(--vv-ease),
-    border-color 0.5s var(--vv-ease),
-    box-shadow 0.5s var(--vv-ease);
-}
-
-.vv-conviction-pillar:hover .vv-conviction-pillar__icon,
-.vv-conviction-pillar:focus-within .vv-conviction-pillar__icon {
-  color: rgba(212, 196, 172, 0.82);
-  border-color: rgba(185, 169, 148, 0.38);
-  box-shadow: 0 0 28px rgba(185, 169, 148, 0.1);
-}
-
-.vv-conviction-pillar__title {
+.vv-conviction__region-active {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
   font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
   color: rgba(236, 230, 222, 0.88);
 }
 
-.vv-conviction-pillar__body {
-  margin: 0.7rem 0 0;
-  max-width: 15rem;
-  font-size: 0.8rem;
-  line-height: 1.72;
-  color: rgba(236, 230, 222, 0.44);
-  transition: color 0.5s var(--vv-ease);
+.vv-conviction__region-active svg {
+  color: rgba(185, 169, 148, 0.55);
+  flex-shrink: 0;
 }
 
-.vv-conviction-pillar:hover .vv-conviction-pillar__body,
-.vv-conviction-pillar:focus-within .vv-conviction-pillar__body {
-  color: rgba(236, 230, 222, 0.56);
+.vv-conviction__region-detail {
+  margin: 0.45rem 0 1.15rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: rgba(236, 230, 222, 0.42);
 }
 
-.vv-conviction__cta-wrap {
-  display: flex;
-  justify-content: center;
+.vv-conviction__region-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.15rem;
 }
 
-.vv-conviction__cta {
-  display: inline-flex;
+.vv-conviction__region-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.85rem 1.5rem;
-  border: 1px solid rgba(236, 230, 222, 0.18);
-  border-radius: 999px;
-  background: rgba(12, 14, 18, 0.55);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 0.65rem 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.4s var(--vv-ease);
+}
+
+.vv-conviction__region-item:hover,
+.vv-conviction__region-item.is-active {
+  background: rgba(185, 169, 148, 0.05);
+}
+
+.vv-conviction__region-item:focus-visible {
+  outline: 1px solid rgba(185, 169, 148, 0.35);
+  outline-offset: 2px;
+}
+
+.vv-conviction__region-index {
   font-family: var(--font-sans);
-  font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(236, 230, 222, 0.82);
-  box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  transition:
-    color 0.45s var(--vv-ease),
-    border-color 0.45s var(--vv-ease),
-    transform 0.45s var(--vv-ease),
-    box-shadow 0.45s var(--vv-ease),
-    background-color 0.45s var(--vv-ease);
+  font-size: 0.46rem;
+  letter-spacing: 0.2em;
+  color: rgba(185, 169, 148, 0.32);
 }
 
-.vv-conviction__cta:hover {
-  color: var(--color-vv-snow);
-  border-color: rgba(185, 169, 148, 0.42);
-  background: rgba(18, 20, 24, 0.72);
-  transform: translateY(-2px);
-  box-shadow:
-    0 16px 36px rgba(0, 0, 0, 0.28),
-    0 0 24px rgba(185, 169, 148, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+.vv-conviction__region-copy {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
 }
 
-.vv-conviction__cta svg {
-  transition: transform 0.45s var(--vv-ease);
+.vv-conviction__region-name {
+  font-size: 0.78rem;
+  color: rgba(236, 230, 222, 0.62);
+  transition: color 0.4s var(--vv-ease);
 }
 
-.vv-conviction__cta:hover svg {
-  transform: translateX(3px);
+.vv-conviction__region-item.is-active .vv-conviction__region-name {
+  color: rgba(236, 230, 222, 0.88);
 }
 
-@media (min-width: 900px) {
-  .vv-conviction__hero {
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-    gap: clamp(2.5rem, 4.5vw, 4rem);
-  }
+.vv-conviction__region-desc {
+  font-size: 0.68rem;
+  line-height: 1.45;
+  color: rgba(236, 230, 222, 0.32);
+}
 
-  .vv-conviction__media {
-    aspect-ratio: 4 / 3;
-  }
+.vv-conviction__region-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 0.4s var(--vv-ease);
+}
 
-  .vv-conviction__copy {
-    padding-top: 0.5rem;
-  }
+.vv-conviction__region-item.is-active .vv-conviction__region-dot {
+  background: rgba(185, 169, 148, 0.55);
+}
 
-  .vv-conviction__pillars {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0;
+.vv-conviction__region-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(185, 169, 148, 0.08);
+  width: 100%;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: rgba(185, 169, 148, 0.52);
+  transition: color 0.4s var(--vv-ease);
+}
+
+.vv-conviction__region-cta:hover {
+  color: rgba(212, 196, 172, 0.82);
+}
+
+.vv-conviction__region-cta svg {
+  transition: transform 0.4s var(--vv-ease);
+}
+
+.vv-conviction__region-cta:hover svg {
+  transform: translateX(2px);
+}
+
+@media (min-width: 960px) {
+  .vv-conviction__stage {
+    grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+    grid-template-rows: auto auto;
+    column-gap: clamp(2.75rem, 5vw, 4.25rem);
+    row-gap: clamp(3rem, 5vw, 4rem);
     align-items: start;
   }
 
-  .vv-conviction-pillar:not([data-last='true'])::after {
-    content: '';
-    position: absolute;
-    top: 0.25rem;
-    right: 0;
-    width: 1px;
-    height: calc(100% - 0.5rem);
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(185, 169, 148, 0.14) 20%,
-      rgba(185, 169, 148, 0.14) 80%,
-      transparent 100%
-    );
+  .vv-conviction__photo-wrap {
+    grid-column: 1;
+    grid-row: 1;
   }
-}
 
-@media (min-width: 1100px) {
+  .vv-conviction__photo {
+    aspect-ratio: 4 / 4.6;
+    min-height: 100%;
+  }
+
+  .vv-conviction__copy {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: clamp(0.5rem, 2vw, 1.5rem);
+  }
+
+  .vv-conviction__principles {
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.25rem);
+    padding-right: 0.5rem;
+  }
+
+  .vv-conviction-principle:not([data-last='true'])::after {
+    right: calc(clamp(0.75rem, 1.5vw, 1.1rem) * -1);
+  }
+
+  .vv-conviction__region-wrap {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+  }
+
   .vv-conviction__title {
-    font-size: clamp(2.1rem, 3.4vw, 3.15rem);
-  }
-
-  .vv-conviction-pillar__body {
-    max-width: 16rem;
-    font-size: 0.82rem;
+    font-size: clamp(2.15rem, 3.5vw, 3.35rem);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .vv-conviction__media-img,
-  .vv-conviction__media:hover .vv-conviction__media-img {
-    transform: scale(1.02);
-    transition: none;
+@media (min-width: 1180px) {
+  .vv-conviction__prose p {
+    font-size: 0.92rem;
+  }
+
+  .vv-conviction-principle__body {
+    max-width: 16.5rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .vv-conviction-principle:not([data-last='true']) {
+    padding-bottom: 1.75rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(185, 169, 148, 0.08);
+  }
+
+  .vv-conviction-principle:not([data-last='true'])::after {
+    display: none;
   }
 }
 

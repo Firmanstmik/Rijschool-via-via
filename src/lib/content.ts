@@ -248,12 +248,14 @@ export const home = {
     titleLine1: 'Meer vertrouwen.',
     titleLine2: 'Zekerder de weg op.',
     body1:
-      'Bij Via Via leer je in een rustige sfeer, met duidelijke uitleg en een vaste instructeur die naast je blijft staan.',
+      'Bij Via Via leer je in een rustige sfeer — met duidelijke uitleg en iemand die naast je blijft staan.',
     body2:
-      'Van Leiden tot Zoeterwoude: je leert bij ons met aandacht, dichtbij en op jouw tempo.',
-    heroImage: '/images/experience-hero.png',
+      'Geen druk. Geen haast. Wel aandacht voor jouw vragen, jouw tempo en jouw groei.',
+    body3:
+      'Van Leiden tot Zoeterwoude: dichtbij, persoonlijk, en altijd met dezelfde begeleider.',
+    heroImage: '/images/experience-trust.png',
     heroAlt:
-      'Instructeur en leerling in rustig gesprek tijdens een rijles — warm licht door de voorruit',
+      'Instructeur en leerling in een rustig gesprek tijdens de rijles — warm licht, Leiden op de achtergrond',
     quote: {
       text: 'Rust in de auto. Ruimte om te groeien.',
       signature: 'Via Via',
@@ -263,25 +265,24 @@ export const home = {
         id: 'steps',
         num: '01',
         title: 'Stap voor stap',
-        body: 'We bouwen samen rustig op, met heldere doelen en feedback die je verder helpt.',
+        body: 'We bouwen samen rustig op — met heldere doelen en feedback die je verder helpt.',
         icon: 'steps' as const,
       },
       {
         id: 'guide',
         num: '02',
-        title: 'Vaste instructeur',
-        body: 'Altijd dezelfde begeleider. Wel zo vertrouwd, wel zo effectief.',
+        title: 'Persoonlijke begeleiding',
+        body: 'Altijd dezelfde instructeur. Iemand die jou kent, en die blijft.',
         icon: 'guide' as const,
       },
       {
-        id: 'care',
+        id: 'calm',
         num: '03',
-        title: 'Aandacht voor jou',
-        body: 'Jouw vragen, jouw tempo, jouw ontwikkeling. Daar draait het om.',
-        icon: 'heart' as const,
+        title: 'Rust en vertrouwen',
+        body: 'Een sfeer waarin vragen mogen — en zekerheid vanzelf groeit.',
+        icon: 'calm' as const,
       },
     ],
-    cta: 'Gratis kennismaking',
   },
   conviction: {
     eyebrow: 'Wat leerlingen zeggen',

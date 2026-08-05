@@ -7,7 +7,6 @@ import { Philosophy } from '@/components/home/Philosophy'
 import { PersonalLearning } from '@/components/home/PersonalLearning'
 import { Experience } from '@/components/home/Experience'
 import { Testimonials } from '@/components/home/Testimonials'
-import { ServiceArea } from '@/components/home/ServiceArea'
 import { FinalCta } from '@/components/home/FinalCta'
 
 export default function App() {
@@ -28,7 +27,6 @@ export default function App() {
         <PersonalLearning />
         <Experience />
         <Testimonials />
-        <ServiceArea />
         <FinalCta />
       </main>
       <Footer />
