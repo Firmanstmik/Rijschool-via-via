@@ -30,8 +30,8 @@ export const navItems = [
 
 export const trustSignals = [
   { label: 'RIS gecertificeerd', detail: 'Officiële partner' },
-  { label: 'Audi Q3 Sportback', detail: 'Premium lesauto' },
   { label: 'Vaste instructeur', detail: 'Persoonlijk traject' },
+  { label: 'Rustige aanpak', detail: 'Leren op jouw tempo' },
   { label: '7 dagen open', detail: 'Incl. weekenden' },
 ] as const
 
@@ -41,8 +41,8 @@ export const heroFeatures = [
     detail: 'Officiële partner in rijopleiding',
   },
   {
-    title: 'Audi Q3 Sportback',
-    detail: 'CBR-goedgekeurde leswagen',
+    title: 'Vaste instructeur',
+    detail: 'Persoonlijke begeleiding, afgestemd op jouw tempo',
   },
   {
     title: '7 dagen per week',
@@ -65,76 +65,50 @@ export const heroBadges = [
 
 export const showcase = {
   brand: 'Rijschool Via Via',
-  title: 'Audi Q3 Sportback',
+  title: 'Rust die je verder brengt',
   lead:
-    'Veilig, modern en CBR-goedgekeurd, jouw leswagen voor een ontspannen rijopleiding.',
-  panelTitle: 'Onze leswagen',
-  cta: 'Meer informatie',
+    'Bij Via Via staat jouw ontwikkeling centraal: een vaste instructeur, rustige uitleg en ruimte om te groeien. De leswagen ondersteunt — meer niet.',
+  panelTitle: 'De Via Via-methode',
+  cta: 'Ervaar de Via Via-methode',
   image: '/images/hero-car-cutout-tight.png',
   gallery: [
     {
-      label: 'Exterieur',
-      body: 'Audi Q3 Sportback die voldoet aan alle eisen die het CBR stelt aan de lesauto.',
-      image: '/images/ai-exterior.jpg',
+      label: 'Welkom',
+      body: 'Oogcontact, een rustige begroeting, even tijd om te landen. Zo begint iedere les — bij jou, niet bij de route.',
+      image: '/images/method-welcome.jpg',
+      alt: 'Instructeur en leerling maken rustig kennis voor de les',
+      crop: 'welcome' as const,
     },
     {
-      label: 'Cockpit',
-      body: 'Virtual cockpit, lane assistance en moderne assistenties voor meer rust achter het stuur.',
-      image: '/images/ai-cockpit.jpg',
+      label: 'Begeleiding',
+      body: 'Handen op het stuur, spiegels bijstellen, houding vinden. Kleine gebaren, heldere uitleg — tot het goed voelt.',
+      image: '/images/method-guidance.jpg',
+      alt: 'Instructeur begeleidt stuurhouding en handen tijdens de uitleg',
+      crop: 'guidance' as const,
     },
     {
-      label: 'Op de weg',
-      body: 'Uitstekend door het verkeer te manoeuvreren, automaat of schakel, zonder meerprijs.',
-      image: '/images/ai-driving.jpg',
+      label: 'Vertrouwen',
+      body: 'Jij kijkt vooruit. De instructeur blijft stil naast je — tot zekerheid vanzelf groeit.',
+      image: '/images/method-confidence.jpg',
+      alt: 'Leerling rijdt met focus terwijl de instructeur rustig meekijkt',
+      crop: 'confidence' as const,
     },
   ],
   hotspots: [
     {
-      id: 'cbr',
-      title: 'CBR-goedgekeurd',
-      detail: 'Voldoet aan alle eisen die het CBR stelt aan de lesauto.',
-      x: 18,
-      y: 48,
+      id: 'calm',
+      title: 'Ruimte om te leren',
+      detail: 'Geen haast. Vragen mogen. Jij krijgt de stilte die nodig is om iets écht te begrijpen.',
+      x: 36,
+      y: 40,
       side: 'left' as const,
     },
     {
-      id: 'cockpit',
-      title: 'Virtual cockpit',
-      detail: 'Duidelijk overzicht achter het stuur, modern en rustgevend.',
-      x: 42,
-      y: 30,
-      side: 'left' as const,
-    },
-    {
-      id: 'assist',
-      title: 'Lane assistance',
-      detail: 'Moderne assistenties voor meer rust tijdens je lessen.',
-      x: 52,
-      y: 24,
-      side: 'right' as const,
-    },
-    {
-      id: 'automaat',
-      title: 'Automaat of schakel',
-      detail: 'Automaat zonder extra kosten vergeleken met schakel.',
-      x: 34,
-      y: 72,
-      side: 'left' as const,
-    },
-    {
-      id: 'handling',
-      title: 'Uitstekend manoeuvreerbaar',
-      detail: 'Veilig, milieuverantwoord en soepel door het verkeer.',
-      x: 78,
-      y: 64,
-      side: 'right' as const,
-    },
-    {
-      id: 'ris',
-      title: 'RIS geschikt',
-      detail: 'Leswagen die past bij onze RIS gecertificeerde aanpak.',
-      x: 58,
-      y: 46,
+      id: 'guide',
+      title: 'Vaste begeleiding',
+      detail: 'Dezelfde instructeur, les na les — iemand die jouw tempo, twijfels en vooruitgang kent.',
+      x: 62,
+      y: 44,
       side: 'right' as const,
     },
   ],
@@ -148,21 +122,21 @@ export const serviceCards = [
     icon: 'seal' as const,
   },
   {
-    title: 'Automaat of schakel',
-    body: 'Kies wat bij jou past. Automaat zonder extra kosten vergeleken met schakel.',
-    image: '/images/ai-cockpit.jpg',
+    title: 'Jouw manier van leren',
+    body: 'Automaat of schakel: bij Via Via kijken we samen naar wat bij jou past, zodat je ontspannen leert.',
+    image: '/images/ai-approach.jpg',
     icon: 'car' as const,
   },
   {
     title: 'Vaste instructeur',
     body: 'Altijd dezelfde begeleider, die precies weet waar jij staat en wat je nodig hebt.',
-    image: '/images/ai-driving.jpg',
+    image: '/images/ai-approach.jpg',
     icon: 'user' as const,
   },
   {
     title: 'Bijzondere rijlessen',
     body: 'Op eigen tempo, met persoonlijke begeleiding en een duidelijk leerplan.',
-    image: '/images/ai-exterior.jpg',
+    image: '/images/ai-approach.jpg',
     icon: 'spark' as const,
   },
 ] as const
@@ -171,7 +145,7 @@ export const home = {
   hero: {
     eyebrow: 'Rijschool Via Via',
     title: 'Kwaliteit',
-    lead: 'Vakmanschap, rust en persoonlijke begeleiding.',
+    lead: 'Vakmanschap, rust en persoonlijke begeleiding — vanaf je eerste les.',
     ctaPrimary: 'Onze aanpak',
     ctaSecondary: 'Kennismaking',
   },
@@ -179,7 +153,7 @@ export const home = {
     eyebrow: 'Filosofie',
     title: 'Je rijbewijs is een investering voor de rest van je leven.',
     lead:
-      'Vrijheid begint met vakmanschap. Wij begeleiden die investering met rust, precisie en verantwoordelijkheid.',
+      'Vrijheid begint met vakmanschap. Via Via begeleidt die investering met rust, precisie en verantwoordelijkheid.',
     col1:
       'Je rijbewijs halen is een grote stap naar meer mobiliteit. Vaak heb je lang gespaard of betalen je ouders je rijopleiding. Daarom is de keuze voor de juiste rijschool essentieel: betrouwbaarheid, vakbekwaamheid en een juiste prijs-kwaliteitverhouding.',
     col2:
@@ -190,7 +164,7 @@ export const home = {
         id: 'trust',
         num: '01',
         title: 'Betrouwbaarheid',
-        body: 'Een rijopleiding is een serieuze investering. Wij behandelen die met dezelfde zorg als jij.',
+        body: 'Je weet waar je aan toe bent: een vaste lijn, duidelijke afspraken en aandacht voor jouw ontwikkeling.',
         icon: 'shield' as const,
         featured: false,
       },
@@ -198,7 +172,7 @@ export const home = {
         id: 'skill',
         num: '02',
         title: 'Vakbekwaamheid',
-        body: 'Persoonlijke begeleiding en actuele verkeerskennis. Rust achter het stuur, zekerheid op de weg.',
+        body: 'Onze instructeurs leggen helder uit, kijken goed en weten wanneer jij klaar bent voor de volgende stap.',
         icon: 'seal' as const,
         featured: false,
       },
@@ -206,7 +180,7 @@ export const home = {
         id: 'value',
         num: '03',
         title: 'Verantwoordelijkheid',
-        body: 'Lessen op jouw tempo. Gericht, zorgvuldig en zonder overbodige stappen.',
+        body: 'We leren je niet alleen slagen, maar zelfstandig en met vertrouwen deelnemen aan het verkeer.',
         icon: 'scale' as const,
         featured: false,
       },
@@ -214,7 +188,7 @@ export const home = {
   },
   why: {
     eyebrow: 'Waarom Rijschool Via Via',
-    title: 'Een goed gevoel in de auto.',
+    title: 'Een goed gevoel tijdens iedere les.',
     titleLine2: 'Dat maakt het verschil.',
     items: [
       {
@@ -224,8 +198,8 @@ export const home = {
       },
       {
         num: '02',
-        title: 'Leren rijden moet leuk zijn',
-        body: 'Wat ons anders maakt: de nadruk op een goed gevoel in de auto. Bij ons heerst altijd een ontspannen sfeer, zodat jij met plezier leert en eerder klaar bent voor de weg.',
+        title: 'Leren rijden moet goed voelen',
+        body: 'Wat ons anders maakt: de nadruk op rust en aandacht. Bij Via Via heerst altijd een ontspannen sfeer, zodat jij met vertrouwen leert en eerder klaar bent voor de weg.',
       },
       {
         num: '03',
@@ -235,30 +209,30 @@ export const home = {
     ],
   },
   craft: {
-    eyebrow: 'Craftsmanship',
-    titleLine1: 'Rijlessen in',
-    titleLine2: 'een Audi Q3.',
+    eyebrow: 'Vakmanschap',
+    titleLine1: 'Leren rijden bij',
+    titleLine2: 'Via Via.',
     body1:
-      'Je leert rijden in een Audi Q3 Sportback die voldoet aan alle eisen die het CBR stelt aan de lesauto. Veilig, milieuverantwoord en uitstekend door het verkeer te manoeuvreren.',
+      'Goede rijlessen draaien om aandacht, uitleg en het juiste moment om los te laten. Bij Via Via staat jouw ontwikkeling centraal.',
     body2:
-      'Moderne technieken, verkeersbordherkenning, dodehoekassistent, parkeerhulp, adaptive cruise control, lane assistance en virtual cockpit, dragen bij aan een ontspannen ervaring achter het stuur.',
+      'Je krijgt een vaste instructeur die jouw traject kent en je helpt groeien naar zelfstandigheid. De leswagen ondersteunt — de aandacht blijft bij jou.',
     callout:
-      'Automaat of schakel: bij Via Via kun je kiezen voor rijlessen in een automaat zonder extra kosten.',
+      'Automaat of schakel: bij Via Via kies je wat bij jou past, zonder extra kosten voor automaat.',
   },
   personal: {
     eyebrow: 'Persoonlijk leren',
-    title: 'Persoonlijke rijopleiding.',
+    title: 'Persoonlijk leren.',
     titleLine1: 'Jouw rijbewijs',
     titleLine2: 'op jouw manier.',
     intro:
-      'Een veelgehoord probleem: onzekerheid achter het stuur. Daarom pakken wij rijlessen anders aan, zodat jij je comfortabel voelt, tijdens de lessen én wanneer je je rijbewijs hebt.',
+      'Jij hoeft niet in een vast stramien te passen. We bouwen jouw rijopleiding rond jouw tempo, jouw vragen en jouw vertrouwen.',
     body:
       'Bij Rijschool Via Via krijg je altijd een vaste instructeur. Die weet precies op welk niveau je zit en welke leerdoelen je in iedere les moet halen. De lessen verlopen soepel en efficiënt, zodat je nooit te veel lessen hebt.',
     featuresLabel: 'Kernpunten',
     cta: 'Kennismaken',
     floatBadge: {
-      title: 'RIS',
-      detail: 'Gecertificeerd',
+      title: 'Via Via',
+      detail: 'RIS-gecertificeerd',
     },
     pillars: [
       {
@@ -275,19 +249,19 @@ export const home = {
   },
   experience: {
     eyebrow: 'Onze overtuiging',
-    titleLine1: 'Sneller je rijbewijs.',
-    titleLine2: 'Eerder de weg op.',
+    titleLine1: 'Meer vertrouwen.',
+    titleLine2: 'Zekerder de weg op.',
     pull:
-      'Kortom: je haalt sneller je rijbewijs, kunt eerder de weg op en bent minder geld kwijt.',
+      'Wanneer je begrijpt wat je doet, groeit het vertrouwen vanzelf — bij Via Via.',
     body1:
-      'Er zijn tal van rijscholen rond Leiden. Wij leggen de nadruk op een goed gevoel in de auto, want leren autorijden moet leuk zijn.',
+      'Bij Via Via leer je in een rustige sfeer, met duidelijke uitleg en een vaste instructeur die naast je blijft staan.',
     body2:
-      'Onze rijschool is voor jong en oud. Wij geven onder andere les in Leiden, Leiderdorp, Oegstgeest, Voorschoten en Zoeterwoude.',
+      'Van Leiden tot Zoeterwoude: je leert bij ons met aandacht, dichtbij en op jouw tempo.',
     cta: 'Gratis kennismaking',
     stat: {
-      label: 'RIS methode',
-      value: 'Gecertificeerd',
-      detail: 'Gericht leerplan hoger slagingspercentage',
+      label: 'Jouw ontwikkeling',
+      value: 'Stap voor stap',
+      detail: 'Heldere doelen, persoonlijke feedback',
     },
   },
   conviction: {
@@ -295,8 +269,8 @@ export const home = {
     quote:
       'Wij willen ervoor zorgen dat jij je comfortabel voelt, zowel tijdens de rijlessen als wanneer je jouw rijbewijs hebt gehaald.',
     meta: 'Onze belofte',
-    cardTitle: 'Een goed gevoel in de auto',
-    cardMeta: 'Leiderdorp Onze belofte',
+    cardTitle: 'Een goed gevoel tijdens iedere les',
+    cardMeta: 'Leiderdorp · Onze belofte',
     summaryLabel: '5.0',
     summaryTitle: 'Uitstekend',
     summaryDetail: '5 reviews',
@@ -312,8 +286,8 @@ export const home = {
     eyebrow: 'Kennismaking',
     titleLine1: 'Jouw eerste les',
     titleLine2: 'is gratis!',
-    body: 'Wij zijn 7 dagen per week open. Maak snel een afspraak voor een gratis proefles, vrijblijvend en persoonlijk.',
-    proof: '7 dagen per week Leiderdorp e.o.',
+    body: 'Maak kennis met Via Via. Persoonlijk, rustig en vrijblijvend — zodat je weet bij wie je leert.',
+    proof: 'Via Via · Vaste instructeur · 7 dagen per week · Leiderdorp e.o.',
   },
   values: [
     'Rijlessen met plezier',
@@ -327,7 +301,7 @@ export const home = {
     eyebrow: 'Werkgebied',
     titleLine1: 'Les in jouw regio',
     titleLine2: 'rond Leiden.',
-    body: 'Onze rijschool is voor jong en oud. Wij geven onder andere les in Leiden, Leiderdorp, Oegstgeest, Voorschoten en Zoeterwoude. Twijfel je of wij ook in jouw regio rijden? Aarzel niet en neem contact op.',
+    body: 'Onze rijschool is voor jong en oud. Wij geven onder andere les in Leiden, Leiderdorp, Oegstgeest, Voorschoten en Zoeterwoude. We kennen de regio, de routes en de vragen die leerlingen onderweg tegenkomen. Twijfel je of wij ook bij jou rijden? Neem gerust contact op.',
     stats: [
       {
         value: "5 regio's",
@@ -342,7 +316,7 @@ export const home = {
   services: {
     eyebrow: 'Wat wij bieden',
     title: 'Meer dan alleen rijlessen',
-    lead: 'Persoonlijke begeleiding, een duidelijk leerplan en een ontspannen sfeer, zodat jij met plezier leert en sneller klaar bent voor de weg.',
+    lead: 'Persoonlijke begeleiding, een helder leerplan en ruimte om vertrouwen op te bouwen — zodat jij met plezier leert rijden.',
     cta: 'Gratis proefles aanvragen',
   },
 } as const
@@ -402,7 +376,7 @@ export const testimonials = [
     title: 'Super goede rijschool!',
     quote: 'Super goeie rijschool!',
     name: 'Sharona R.',
-    meta: 'Leiderdorp Google review',
+    meta: 'Leiderdorp · Google review',
     rating: 5,
     image: '/images/ai-approach.jpg',
   },
@@ -410,36 +384,36 @@ export const testimonials = [
     title: 'Zeer tevreden',
     quote: 'Zeer tevreden over de lessen en de begeleiding.',
     name: 'Tycho',
-    meta: 'Leiderdorp Personenauto',
+    meta: 'Leiderdorp · Persoonlijke begeleiding',
     rating: 5,
-    image: '/images/ai-driving.jpg',
+    image: '/images/ai-approach.jpg',
   },
   {
     title: 'Altijd een goed gevoel',
     quote:
       'Rustige instructeur, duidelijke uitleg en een ontspannen sfeer. Ik voelde me meteen op mijn gemak achter het stuur.',
     name: 'Emma K.',
-    meta: 'Leiden Automaat',
+    meta: 'Leiden · Rustig leren',
     rating: 5,
-    image: '/images/ai-cockpit.jpg',
+    image: '/images/ai-approach.jpg',
   },
   {
     title: 'Persoonlijk en efficiënt',
     quote:
       'Vaste instructeur die precies weet waar je staat. Geen onnodige lessen, alles gericht op jouw tempo.',
     name: 'Lars V.',
-    meta: 'Oegstgeest RIS',
+    meta: 'Oegstgeest · RIS-traject',
     rating: 5,
-    image: '/images/ai-exterior.jpg',
+    image: '/images/ai-approach.jpg',
   },
   {
     title: 'Aanrader rond Leiden',
     quote:
-      'Flexibel plannen, moderne leswagen en echt aandacht voor rijplezier. Binnenkort mijn rijbewijs, dankjewel Via Via!',
+      'Flexibel plannen, rustige begeleiding en echt aandacht voor rijplezier. Binnenkort mijn rijbewijs, dankjewel Via Via!',
     name: 'Noor S.',
-    meta: 'Voorschoten 5 sterren',
+    meta: 'Voorschoten · Via Via',
     rating: 5,
-    image: '/images/ai-region.jpg',
+    image: '/images/ai-approach.jpg',
   },
 ] as const
 

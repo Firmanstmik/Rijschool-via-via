@@ -89,7 +89,7 @@ export function PersonalLearning() {
               animate={
                 reduce
                   ? undefined
-                  : { y: [0, -10, 0] }
+                  : { y: [0, -5, 0] }
               }
               transition={{
                 duration: 5.5,
@@ -99,7 +99,7 @@ export function PersonalLearning() {
             >
               <img
                 src={images.heroCutout}
-                alt="Audi Q3 Sportback leswagen van Rijschool Via Via"
+                alt=""
                 className="vv-approach__core-img"
                 width={1181}
                 height={534}

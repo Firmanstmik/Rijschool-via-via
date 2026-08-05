@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  CarProfile,
+  Path,
   SealCheck,
   Sparkle,
   UserFocus,
@@ -13,7 +13,7 @@ import { cn } from '@/lib/cn'
 
 const icons = {
   seal: SealCheck,
-  car: CarProfile,
+  car: Path,
   user: UserFocus,
   spark: Sparkle,
 } as const
@@ -74,7 +74,7 @@ export function ServicesGrid() {
                         aria-hidden
                       />
                       <span className="vv-service-card__hint">
-                        Ontdek
+                        Hoe we begeleiden
                         <ArrowUpRight size={14} weight="bold" aria-hidden />
                       </span>
                     </div>
@@ -89,7 +89,7 @@ export function ServicesGrid() {
                       animate={
                         reduce
                           ? undefined
-                          : { scale: isActive ? 1.08 : 1.02 }
+                          : { scale: isActive ? 1.04 : 1.02 }
                       }
                       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                     />

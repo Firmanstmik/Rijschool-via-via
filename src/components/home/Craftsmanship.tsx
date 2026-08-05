@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import {
-  CarProfile,
+  UserFocus,
   SealCheck,
   CalendarBlank,
   SteeringWheel,
@@ -11,7 +11,7 @@ import { SectionEyebrow } from '@/components/site/SectionEyebrow'
 import { home, images } from '@/lib/content'
 
 const stats = [
-  { icon: CarProfile, label: 'Leswagen', value: 'Audi Q3 Sportback' },
+  { icon: UserFocus, label: 'Vaste instructeur', value: 'Persoonlijk traject' },
   { icon: SealCheck, label: 'Methode', value: 'RIS gecertificeerd' },
   { icon: CalendarBlank, label: 'Beschikbaar', value: '7 dagen per week' },
 ] as const
