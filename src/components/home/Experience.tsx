@@ -33,8 +33,9 @@ export function Experience() {
                 className="vv-conviction__photo-img"
                 width={1200}
                 height={900}
-                loading="lazy"
+                loading="eager"
                 decoding="async"
+                fetchPriority="low"
               />
               <div className="vv-conviction__photo-shade" aria-hidden />
 
