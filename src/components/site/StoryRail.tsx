@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion'
+import { useReducedMotion } from 'framer-motion'
 
 const CHAPTERS = [
   { id: 'top', label: 'Begin' },
@@ -18,12 +18,6 @@ const CHAPTERS = [
  */
 export function StoryRail() {
   const reduce = useReducedMotion()
-  const { scrollYProgress } = useScroll()
-  const progress = useSpring(scrollYProgress, {
-    stiffness: 90,
-    damping: 28,
-    mass: 0.35,
-  })
   const [active, setActive] = useState<string>(CHAPTERS[0].label)
 
   useEffect(() => {
@@ -59,7 +53,6 @@ export function StoryRail() {
 
   return (
     <div className="vv-story-rail" aria-hidden>
-      <motion.div className="vv-story-rail__bar" style={{ scaleX: progress }} />
       <p className="vv-story-rail__whisper" key={active}>
         {active}
       </p>
