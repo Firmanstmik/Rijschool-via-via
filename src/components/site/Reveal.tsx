@@ -39,9 +39,9 @@ export function Reveal({
         x: 0,
         scale: 1,
         filter: 'blur(0px)',
-        transition: { duration: 1.05, ease: easeLuxury, delay },
+        transition: { duration: 1.15, ease: easeLuxury, delay },
       }}
-      viewport={{ once: true, amount: 0.22, margin: '0px 0px -8% 0px' }}
+      viewport={{ once: true, amount: 0.18, margin: '0px 0px -6% 0px' }}
     >
       {children}
     </motion.div>
@@ -51,8 +51,8 @@ export function Reveal({
 export function RevealStagger({
   children,
   className,
-  delayChildren = 0.1,
-  staggerChildren = 0.14,
+  delayChildren = 0.08,
+  staggerChildren = 0.12,
 }: {
   children: ReactNode
   className?: string
@@ -70,7 +70,7 @@ export function RevealStagger({
       className={cn(className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.18, margin: '0px 0px -6% 0px' }}
+      viewport={{ once: true, amount: 0.14, margin: '0px 0px -5% 0px' }}
       variants={{
         hidden: {},
         visible: {
@@ -92,6 +92,36 @@ export function RevealItem({
 }) {
   return (
     <motion.div className={className} variants={fadeUp}>
+      {children}
+    </motion.div>
+  )
+}
+
+/** Soft whole-section arrival so chapters feel continuous */
+export function Chapter({
+  children,
+  className,
+}: {
+  children: ReactNode
+  className?: string
+}) {
+  const reduce = useReducedMotion()
+
+  if (reduce) {
+    return <div className={className}>{children}</div>
+  }
+
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0.42, y: 32 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1.2, ease: easeLuxury },
+      }}
+      viewport={{ once: true, amount: 0.12, margin: '0px 0px -4% 0px' }}
+    >
       {children}
     </motion.div>
   )
