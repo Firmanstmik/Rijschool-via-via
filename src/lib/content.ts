@@ -1,4 +1,4 @@
-﻿import type { ServiceRegionId } from './future'
+import type { ServiceRegionId } from './future'
 
 /** Source of truth: https://rijschoolviavia.nl/, redesigned presentation, official facts only. */
 export const brand = {
@@ -70,26 +70,26 @@ export const showcase = {
     'Eerst de mens. Dan de les. Via Via begeleidt jou in rust, tot vertrouwen vanzelf groeit.',
   panelTitle: 'De Via Via-methode',
   cta: 'Ervaar de Via Via-methode',
-  image: '/images/hero-car-cutout-tight.png',
+  image: '/images/hero-car-cutout-tight.webp',
   gallery: [
     {
       label: 'Welkom',
       body: 'Oogcontact, een rustige begroeting. Iedere les begint bij jou, niet bij de route.',
-      image: '/images/method-welcome.jpg',
+      image: '/images/method-welcome.webp',
       alt: 'Instructeur en leerling maken rustig kennis voor de les',
       crop: 'welcome' as const,
     },
     {
       label: 'Begeleiding',
       body: 'Kleine gebaren. Heldere uitleg. Iemand die naast je blijft tot het goed voelt.',
-      image: '/images/method-guidance.jpg',
+      image: '/images/method-guidance.webp',
       alt: 'Instructeur begeleidt stuurhouding en handen tijdens de uitleg',
       crop: 'guidance' as const,
     },
     {
       label: 'Vertrouwen',
       body: 'Jij kijkt vooruit. De instructeur blijft stil, tot zekerheid vanzelf groeit.',
-      image: '/images/method-confidence.jpg',
+      image: '/images/method-confidence.webp',
       alt: 'Leerling rijdt met focus terwijl de instructeur rustig meekijkt',
       crop: 'confidence' as const,
     },
@@ -112,28 +112,28 @@ export const serviceCards = [
   {
     title: 'Aankomen',
     body: 'Je stapt uit de dag. Even stil. Hier begint het rustig.',
-    image: '/images/journey-01-arrival.jpg',
+    image: '/images/journey-01-arrival.webp',
     alt: 'Leerling arriveert; instructeur verwelkomt kalm',
     icon: 'seal' as const,
   },
   {
     title: 'Verbinding',
     body: 'Iemand die echt luistert. Vertrouwen groeit in stilte.',
-    image: '/images/journey-02-connection.jpg',
+    image: '/images/journey-02-connection.webp',
     alt: 'Oogcontact en rustige verbinding tijdens de les',
     icon: 'car' as const,
   },
   {
     title: 'Groei',
     body: 'Jij rijdt. Adem in. De zekerheid komt van binnenuit.',
-    image: '/images/journey-03-growth.jpg',
+    image: '/images/journey-03-growth.webp',
     alt: 'Leerling rijdt met stille focus en concentratie',
     icon: 'user' as const,
   },
   {
     title: 'Verder',
     body: 'De les is klaar. Je merkt het verschil, zonder woorden.',
-    image: '/images/journey-04-resolution.jpg',
+    image: '/images/journey-04-resolution.webp',
     alt: 'Leerling loopt weg na de les met stil zelfvertrouwen',
     icon: 'spark' as const,
   },
@@ -154,7 +154,7 @@ export const home = {
     title: 'Je rijbewijs is een investering voor de rest van je leven.',
     lead:
       'Vrijheid begint met vakmanschap. Via Via begeleidt die investering met rust, precisie en verantwoordelijkheid.',
-    heroImage: '/images/philosophy-hero.png',
+    heroImage: '/images/philosophy-hero.webp',
     heroAlt:
       'Donkere premium SUV op een schilderachtige bergweg bij schemering, symbool van vrijheid en vakmanschap',
     closing: 'Vertrouwen is de basis. Vaardigheid volgt vanzelf.',
@@ -222,7 +222,7 @@ export const home = {
     subtitle: 'Eerst de mens. Dan de les.',
     intro:
       'Jij hoeft niet in een vast stramien te passen. We bouwen jouw rijopleiding rond jouw tempo, jouw vragen en jouw vertrouwen.',
-    heroImage: '/images/personal-hero.png',
+    heroImage: '/images/personal-hero.webp',
     heroAlt: 'Instructeur en leerling delen een rustig moment van vertrouwen in de auto',
     closing: 'Vertrouwen is de basis. Vaardigheid volgt vanzelf.',
     signature: 'Via Via',
@@ -232,7 +232,7 @@ export const home = {
         num: '01',
         title: 'Jouw tempo.',
         body: 'Geen haast. Geen druk. We lessen op een manier die bij jóu past, niet andersom.',
-        image: '/images/personal-01-tempo.png',
+        image: '/images/personal-01-tempo.webp',
         alt: 'Leerling rijdt met kalme focus en concentratie',
       },
       {
@@ -240,7 +240,7 @@ export const home = {
         num: '02',
         title: 'Iemand die blijft.',
         body: 'Altijd dezelfde instructeur. Wel zo vertrouwd. Wel zo effectief.',
-        image: '/images/personal-02-guide.png',
+        image: '/images/personal-02-guide.webp',
         alt: 'Vaste instructeur begeleidt de leerling met rust en aandacht',
       },
     ],
@@ -255,7 +255,7 @@ export const home = {
       'Geen druk. Geen haast. Wel aandacht voor jouw vragen, jouw tempo en jouw groei.',
     body3:
       'Van Leiden tot Zoeterwoude: dichtbij, persoonlijk, altijd dezelfde begeleider.',
-    heroImage: '/images/experience-trust.png',
+    heroImage: '/images/experience-trust.webp',
     heroAlt:
       'Instructeur en leerling in een rustig gesprek tijdens de rijles, warm licht, Leiden op de achtergrond',
     quote: {
@@ -382,17 +382,17 @@ export const regions: {
 ]
 
 export const images = {
-  hero: '/images/hero-car.png?v=8',
-  heroMobile: '/images/hero-car-mobile.png',
-  heroPeople: '/images/personal-hero.png',
-  heroCutout: '/images/hero-car-cutout-tight.png',
-  instructor: '/images/ai-approach.jpg',
-  cockpit: '/images/ai-cockpit.jpg',
-  driving: '/images/ai-driving.jpg',
-  exterior: '/images/ai-exterior.jpg',
-  region: '/images/ai-region.jpg',
-  approach: '/images/ai-approach.jpg',
-  cta: '/images/ai-cta.jpg',
+  hero: '/images/hero-car.webp',
+  heroMobile: '/images/hero-car-mobile.webp',
+  heroPeople: '/images/personal-hero.webp',
+  heroCutout: '/images/hero-car-cutout-tight.webp',
+  instructor: '/images/ai-approach.webp',
+  cockpit: '/images/ai-cockpit.webp',
+  driving: '/images/ai-driving.webp',
+  exterior: '/images/ai-exterior.webp',
+  region: '/images/ai-region.webp',
+  approach: '/images/ai-approach.webp',
+  cta: '/images/ai-cta.webp',
 } as const
 
 export const testimonials = [
@@ -402,7 +402,7 @@ export const testimonials = [
     name: 'Sharona R.',
     meta: 'Leiderdorp · Google review',
     rating: 5,
-    image: '/images/ai-approach.jpg',
+    image: '/images/ai-approach.webp',
   },
   {
     title: 'Zeer tevreden',
@@ -410,7 +410,7 @@ export const testimonials = [
     name: 'Tycho',
     meta: 'Leiderdorp · Persoonlijke begeleiding',
     rating: 5,
-    image: '/images/ai-approach.jpg',
+    image: '/images/ai-approach.webp',
   },
   {
     title: 'Altijd een goed gevoel',
@@ -419,7 +419,7 @@ export const testimonials = [
     name: 'Emma K.',
     meta: 'Leiden · Rustig leren',
     rating: 5,
-    image: '/images/ai-approach.jpg',
+    image: '/images/ai-approach.webp',
   },
   {
     title: 'Persoonlijk en efficiënt',
@@ -428,7 +428,7 @@ export const testimonials = [
     name: 'Lars V.',
     meta: 'Oegstgeest · RIS-traject',
     rating: 5,
-    image: '/images/ai-approach.jpg',
+    image: '/images/ai-approach.webp',
   },
   {
     title: 'Aanrader rond Leiden',
@@ -437,7 +437,7 @@ export const testimonials = [
     name: 'Noor S.',
     meta: 'Voorschoten · Via Via',
     rating: 5,
-    image: '/images/ai-approach.jpg',
+    image: '/images/ai-approach.webp',
   },
 ] as const
 
