@@ -54,17 +54,17 @@ export function Hero() {
           className="vv-showroom__media"
           style={reduce ? undefined : { y: imgY, scale: imgScale }}
         >
-          <motion.img
-            src={images.hero}
-            alt=""
-            className="vv-showroom__img"
-            width={1920}
-            height={1080}
-            fetchPriority="high"
-            initial={reduce ? false : { scale: 1.04, opacity: 0.48 }}
-            animate={{ scale: 1, opacity: 0.78 }}
-            transition={{ duration: 3.2, ease }}
-          />
+          <picture>
+            <source media="(min-width: 1024px)" srcSet={images.hero} />
+            <img
+              src={images.heroPeople}
+              alt=""
+              className="vv-showroom__img"
+              width={1920}
+              height={1080}
+              fetchPriority="high"
+            />
+          </picture>
         </motion.div>
 
         <div className="vv-showroom__grade" />
@@ -117,9 +117,20 @@ export function Hero() {
           <h1 className="vv-showroom__title">
             <span className="vv-showroom__title-mask">
               <motion.span
+                className="vv-showroom__brand"
                 initial={reduce ? false : { y: '105%' }}
                 animate={{ y: '0%' }}
-                transition={{ duration: 1.55, ease, delay: 1.15 }}
+                transition={{ duration: 1.55, ease, delay: 1.05 }}
+              >
+                {home.hero.brand}
+              </motion.span>
+            </span>
+            <span className="vv-showroom__title-mask vv-showroom__title-mask--sub">
+              <motion.span
+                className="vv-showroom__title-sub"
+                initial={reduce ? false : { y: '105%' }}
+                animate={{ y: '0%' }}
+                transition={{ duration: 1.45, ease, delay: 1.28 }}
               >
                 {home.hero.title}
               </motion.span>
@@ -144,14 +155,22 @@ export function Hero() {
             <a href="#aanpak" className="vv-btn vv-btn--primary vv-btn--showroom">
               <span>{home.hero.ctaPrimary}</span>
             </a>
-            <span
+            <a
+              href="#proefles"
               className="vv-btn vv-btn--ghost vv-btn--showroom vv-btn--showroom-soft"
-              aria-disabled="true"
-              title="Binnenkort beschikbaar"
             >
               <span>{home.hero.ctaSecondary}</span>
-            </span>
+            </a>
           </motion.div>
+
+          <motion.p
+            className="vv-showroom__proof"
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.1, ease, delay: 2.25 }}
+          >
+            {home.hero.proof}
+          </motion.p>
         </div>
 
         <aside className="vv-showroom__badges">
