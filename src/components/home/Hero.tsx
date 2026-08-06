@@ -57,11 +57,11 @@ export function Hero() {
           <picture>
             <source media="(min-width: 1024px)" srcSet={images.hero} />
             <img
-              src={images.heroPeople}
+              src={images.heroMobile}
               alt=""
               className="vv-showroom__img"
-              width={1920}
-              height={1080}
+              width={1080}
+              height={1920}
               fetchPriority="high"
             />
           </picture>
