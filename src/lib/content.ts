@@ -141,11 +141,13 @@ export const serviceCards = [
 
 export const home = {
   hero: {
-    eyebrow: 'Rijschool Via Via',
+    eyebrow: 'Als rijplezier voorop gaat',
+    brand: 'Via Via',
     title: 'Kwaliteit',
     lead: 'Vakmanschap, rust en persoonlijke begeleiding, vanaf je eerste les.',
     ctaPrimary: 'Onze aanpak',
     ctaSecondary: 'Kennismaking',
+    proof: '5,0 Google · Vaste instructeur · Leiderdorp',
   },
   philosophy: {
     eyebrow: 'Filosofie',
@@ -381,6 +383,7 @@ export const regions: {
 
 export const images = {
   hero: '/images/hero-car.png?v=8',
+  heroPeople: '/images/personal-hero.png',
   heroCutout: '/images/hero-car-cutout-tight.png',
   instructor: '/images/ai-approach.jpg',
   cockpit: '/images/ai-cockpit.jpg',
