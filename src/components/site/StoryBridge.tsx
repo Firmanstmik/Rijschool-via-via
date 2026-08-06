@@ -8,9 +8,7 @@ export function StoryBridge({ line }: { line: string }) {
   return (
     <div className="vv-story-bridge" aria-hidden>
       <Reveal className="vv-story-bridge__inner" delay={0.04}>
-        <span className="vv-story-bridge__rule" />
         <p className="vv-story-bridge__line">{line}</p>
-        <span className="vv-story-bridge__rule" />
       </Reveal>
     </div>
   )

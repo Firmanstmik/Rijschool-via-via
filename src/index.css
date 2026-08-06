@@ -110,19 +110,7 @@ body {
 }
 
 .vv-story > section::before {
-  content: '';
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 6%,
-    rgba(185, 169, 148, 0.09) 50%,
-    transparent 94%
-  );
-  pointer-events: none;
-  z-index: 2;
+  display: none;
 }
 
 .vv-story > section:first-of-type::before {
@@ -140,19 +128,7 @@ body {
 }
 
 .vv-story-rail__bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  transform-origin: 0 50%;
-  background: linear-gradient(
-    90deg,
-    rgba(185, 169, 148, 0.15),
-    rgba(232, 224, 212, 0.72),
-    rgba(185, 169, 148, 0.35)
-  );
-  box-shadow: 0 0 12px rgba(185, 169, 148, 0.22);
+  display: none;
 }
 
 .vv-story-rail__whisper {
@@ -187,15 +163,7 @@ body {
 }
 
 .vv-story-bridge__rule {
-  flex: 1 1 auto;
-  height: 1px;
-  max-width: 4.5rem;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(185, 169, 148, 0.28),
-    transparent
-  );
+  display: none;
 }
 
 .vv-story-bridge__line {
