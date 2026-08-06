@@ -74,7 +74,7 @@ export const showcase = {
   gallery: [
     {
       label: 'Welkom',
-      body: 'Oogcontact, een rustige begroeting, even tijd om te landen. Zo begint iedere les — bij jou, niet bij de route.',
+      body: 'Oogcontact, een rustige begroeting. Iedere les begint bij jou — niet bij de route.',
       image: '/images/method-welcome.jpg',
       alt: 'Instructeur en leerling maken rustig kennis voor de les',
       crop: 'welcome' as const,

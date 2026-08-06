@@ -25,12 +25,11 @@ export function Showcase() {
       <div className="vv-shell">
         <RevealStagger className="vv-plate__gallery" delayChildren={0.12}>
           {showcase.gallery.map((card, index) => (
-            <RevealItem key={card.label}>
+            <RevealItem key={card.label} className="vv-plate__gallery-item">
               <article
                 className={cn(
                   'vv-plate-card',
                   `vv-plate-card--${card.crop}`,
-                  `vv-plate-card--step-${index + 1}`,
                 )}
               >
                 <div className="vv-plate-card__media">
@@ -39,7 +38,7 @@ export function Showcase() {
                     alt={card.alt}
                     loading="lazy"
                     width={720}
-                    height={960}
+                    height={900}
                   />
                 </div>
                 <div className="vv-plate-card__body">
