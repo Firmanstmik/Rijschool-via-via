@@ -383,6 +383,7 @@ export const regions: {
 
 export const images = {
   hero: '/images/hero-car.png?v=8',
+  heroMobile: '/images/hero-car-mobile.png',
   heroPeople: '/images/personal-hero.png',
   heroCutout: '/images/hero-car-cutout-tight.png',
   instructor: '/images/ai-approach.jpg',
