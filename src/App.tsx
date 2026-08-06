@@ -1,5 +1,7 @@
 import { Navbar } from '@/components/site/Navbar'
 import { Footer } from '@/components/site/Footer'
+import { StoryRail } from '@/components/site/StoryRail'
+import { StoryBridge } from '@/components/site/StoryBridge'
 import { Hero } from '@/components/home/Hero'
 import { Showcase } from '@/components/home/Showcase'
 import { ServicesGrid } from '@/components/home/ServicesGrid'
@@ -19,14 +21,22 @@ export default function App() {
         Ga naar inhoud
       </a>
       <Navbar />
-      <main id="main">
+      <StoryRail />
+      <main id="main" className="vv-story">
         <Hero />
+        <StoryBridge line="Eerst de mens. Dan de les." />
         <Showcase />
+        <StoryBridge line="Wat stil groeit, blijft." />
         <ServicesGrid />
+        <StoryBridge line="Een investering voor het leven." />
         <Philosophy />
+        <StoryBridge line="Op jouw tempo. Met dezelfde begeleider." />
         <PersonalLearning />
+        <StoryBridge line="Meer vertrouwen. Zekerder de weg op." />
         <Experience />
+        <StoryBridge line="Wat leerlingen voelen." />
         <Testimonials />
+        <StoryBridge line="Maak kennis. Vrijblijvend." />
         <FinalCta />
       </main>
       <Footer />
