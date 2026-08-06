@@ -67,14 +67,14 @@ export const showcase = {
   brand: 'Rijschool Via Via',
   title: 'Rust die je verder brengt',
   lead:
-    'Eerst de mens. Dan de les. Via Via begeleidt jou in rust — tot vertrouwen vanzelf groeit.',
+    'Eerst de mens. Dan de les. Via Via begeleidt jou in rust, tot vertrouwen vanzelf groeit.',
   panelTitle: 'De Via Via-methode',
   cta: 'Ervaar de Via Via-methode',
   image: '/images/hero-car-cutout-tight.png',
   gallery: [
     {
       label: 'Welkom',
-      body: 'Oogcontact, een rustige begroeting. Iedere les begint bij jou — niet bij de route.',
+      body: 'Oogcontact, een rustige begroeting. Iedere les begint bij jou, niet bij de route.',
       image: '/images/method-welcome.jpg',
       alt: 'Instructeur en leerling maken rustig kennis voor de les',
       crop: 'welcome' as const,
@@ -88,7 +88,7 @@ export const showcase = {
     },
     {
       label: 'Vertrouwen',
-      body: 'Jij kijkt vooruit. De instructeur blijft stil — tot zekerheid vanzelf groeit.',
+      body: 'Jij kijkt vooruit. De instructeur blijft stil, tot zekerheid vanzelf groeit.',
       image: '/images/method-confidence.jpg',
       alt: 'Leerling rijdt met focus terwijl de instructeur rustig meekijkt',
       crop: 'confidence' as const,
@@ -132,7 +132,7 @@ export const serviceCards = [
   },
   {
     title: 'Verder',
-    body: 'De les is klaar. Je merkt het verschil — zonder woorden.',
+    body: 'De les is klaar. Je merkt het verschil, zonder woorden.',
     image: '/images/journey-04-resolution.jpg',
     alt: 'Leerling loopt weg na de les met stil zelfvertrouwen',
     icon: 'spark' as const,
@@ -143,7 +143,7 @@ export const home = {
   hero: {
     eyebrow: 'Rijschool Via Via',
     title: 'Kwaliteit',
-    lead: 'Vakmanschap, rust en persoonlijke begeleiding — vanaf je eerste les.',
+    lead: 'Vakmanschap, rust en persoonlijke begeleiding, vanaf je eerste les.',
     ctaPrimary: 'Onze aanpak',
     ctaSecondary: 'Kennismaking',
   },
@@ -154,7 +154,7 @@ export const home = {
       'Vrijheid begint met vakmanschap. Via Via begeleidt die investering met rust, precisie en verantwoordelijkheid.',
     heroImage: '/images/philosophy-hero.png',
     heroAlt:
-      'Donkere premium SUV op een schilderachtige bergweg bij schemering — symbool van vrijheid en vakmanschap',
+      'Donkere premium SUV op een schilderachtige bergweg bij schemering, symbool van vrijheid en vakmanschap',
     closing: 'Vertrouwen is de basis. Vaardigheid volgt vanzelf.',
     signature: 'Via Via',
     pillars: [
@@ -210,7 +210,7 @@ export const home = {
     body1:
       'Goede rijlessen draaien om aandacht, uitleg en het juiste moment om los te laten. Bij Via Via staat jouw ontwikkeling centraal.',
     body2:
-      'Je krijgt een vaste instructeur die jouw traject kent en je helpt groeien naar zelfstandigheid. De leswagen ondersteunt — de aandacht blijft bij jou.',
+      'Je krijgt een vaste instructeur die jouw traject kent en je helpt groeien naar zelfstandigheid. De leswagen ondersteunt. De aandacht blijft bij jou.',
     callout:
       'Automaat of schakel: bij Via Via kies je wat bij jou past, zonder extra kosten voor automaat.',
   },
@@ -229,7 +229,7 @@ export const home = {
         id: 'tempo',
         num: '01',
         title: 'Jouw tempo.',
-        body: 'Geen haast. Geen druk. We lessen op een manier die bij jóu past — niet andersom.',
+        body: 'Geen haast. Geen druk. We lessen op een manier die bij jóu past, niet andersom.',
         image: '/images/personal-01-tempo.png',
         alt: 'Leerling rijdt met kalme focus en concentratie',
       },
@@ -248,14 +248,14 @@ export const home = {
     titleLine1: 'Meer vertrouwen.',
     titleLine2: 'Zekerder de weg op.',
     body1:
-      'Bij Via Via leer je in een rustige sfeer — met duidelijke uitleg en iemand die naast je blijft staan.',
+      'Bij Via Via leer je in een rustige sfeer, met duidelijke uitleg en iemand die naast je blijft staan.',
     body2:
       'Geen druk. Geen haast. Wel aandacht voor jouw vragen, jouw tempo en jouw groei.',
     body3:
       'Van Leiden tot Zoeterwoude: dichtbij, persoonlijk, altijd dezelfde begeleider.',
     heroImage: '/images/experience-trust.png',
     heroAlt:
-      'Instructeur en leerling in een rustig gesprek tijdens de rijles — warm licht, Leiden op de achtergrond',
+      'Instructeur en leerling in een rustig gesprek tijdens de rijles, warm licht, Leiden op de achtergrond',
     quote: {
       text: 'Rust in de auto. Ruimte om te groeien.',
       signature: 'Via Via',
@@ -306,7 +306,7 @@ export const home = {
     eyebrow: 'Kennismaking',
     titleLine1: 'Jouw eerste les',
     titleLine2: 'is gratis!',
-    body: 'Maak kennis met Via Via. Persoonlijk, rustig en vrijblijvend — zodat je weet bij wie je leert.',
+    body: 'Maak kennis met Via Via. Persoonlijk, rustig en vrijblijvend, zodat je weet bij wie je leert.',
     proof: 'Via Via · Vaste instructeur · 7 dagen per week · Leiderdorp e.o.',
   },
   values: [
@@ -336,7 +336,7 @@ export const home = {
   services: {
     eyebrow: 'Het gevoel',
     title: 'Zekerheid begint met rust.',
-    lead: 'Vier momenten. Eén traject. Van aankomen tot verder gaan — in stilte groeit het vertrouwen.',
+    lead: 'Vier momenten. Eén traject. Van aankomen tot verder gaan. In stilte groeit het vertrouwen.',
     cta: 'Ervaar Via Via',
   },
 } as const
