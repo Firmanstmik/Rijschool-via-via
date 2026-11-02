@@ -1,27 +1,18 @@
-# Rijschool Via Via — Premium Homepage
+# Rijschool Via Via
 
-Presentation-ready homepage concept for **Rijschool Via Via** (Leiderdorp).
+Driving school website for Rijschool Via Via (Leiderdorp), built with React, TypeScript, Vite, and Tailwind CSS.
 
-## Stack
-
-- React 19 + Vite + TypeScript
-- Tailwind CSS 4
-- Framer Motion
-- Brand fonts: **Open Sans** + **Lato** (exact match to rijschoolviavia.nl)
-
-## Run
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Scope
+## Production build
 
-- Homepage only
-- Navigation links to other pages are visually present but disabled
-- Future-ready stubs for booking / scheduling / regions / pricing in `src/lib/future.ts`
+```bash
+npm run build
+```
 
-## Content
-
-All copy and assets are derived from the official website and company details. Images are reused from rijschoolviavia.nl with editorial treatment.
+The application is deployed from the `main` branch.
